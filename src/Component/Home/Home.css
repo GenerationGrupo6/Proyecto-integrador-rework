@@ -100,7 +100,7 @@ li::marker{
 }
 
 .Money-Image-Steps-Donation-Home-Page{
-  background-image: url("/src/Images/Money-Donation.jpg");
+  background-image: url("/src/assets/Money-Donation.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 40vh;
