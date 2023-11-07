@@ -1,0 +1,78 @@
+.contenedorposicion{
+    align-items: start;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    background-color: var(--color-secundario-B);
+}
+.contenedordonaciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+    padding: 2rem;
+    width: 50vw;
+    height: 100%;
+    background-color:var(--color-primario-B);
+}
+.cajadedonaciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width:30vw;
+    
+}
+.donacionanonima{
+   
+    font-size: 14px;
+    text-align: justify;
+    
+}
+.nadiesabe{
+    
+    font-size: 14px;
+    text-align: justify;
+    
+}
+.nombredonante{
+    
+    font-size: 14px;
+    text-align: justify;
+    justify-content: start;
+    
+}
+.elplatuo{
+    
+    font-size: 14px;
+    text-align: justify;
+    
+}
+.montodonacion{
+   
+    font-size: 14px;
+    text-align: justify;
+   
+}
+.laplata{
+    
+    font-size: 14px;
+    text-align: justify;
+          
+}
+.destinodonacion{
+   
+    font-size: 14px;
+    text-align: justify;
+    
+}
+.desticomunas{
+    
+    font-size: 14px;
+    text-align: justify;
+    
+}
+.guardardonacion{
+    background-color: red;
+    height: 3rem;
+    width: 10rem;
+}
