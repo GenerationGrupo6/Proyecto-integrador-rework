@@ -1,0 +1,112 @@
+.Ilustration-Section-Home-Page {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  padding: 0;
+  margin-top: 5vh;
+}
+
+.Full-Ilustation-Home-Page {
+  background-image: url("/src/assets/foodDonation.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 1vh;
+  height: 100vh;
+  text-align: right;
+}
+
+.Header-Home-Page {
+  line-height: 2vh;
+}
+
+.We-Feed-The-Change {
+  font-size: 6.5vh;
+  color: #432744;
+  margin-top: 10vh;
+  line-height: 3vh;
+  margin-right: 6vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.Together {
+  margin-top: 0vh;
+  margin-right: 31vh;
+  font-size: 7.5vh;
+  font-style: italic;
+  font-weight: bold;
+  color: #432744;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.Infortation-Cloud-Section-Home-Page {
+  height: 10vh;
+  padding: 0;
+  margin: 3vh;
+}
+
+.Steps-Donation-Section-Home-Page {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  margin: 5vh;
+}
+
+.Steps-Donation-Fist-Division-Home-Page {
+  display: flex;
+  justify-content: left;
+  margin-top: 5vh;
+
+}
+
+.HeadersSpace-Steps-Donation-Home-Page {
+  margin: 1vh;
+  padding-left: 6vh;
+  line-height: 1.5vh;
+}
+
+.Follow-Instructions-Donation-Home-Page {
+  font-size: 4vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  width: bold;
+}
+
+.Title-Steps-Donation-Home-Page {
+  font-size: 6vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Steps-Donation-Second-Division-Home-Page {
+  margin-top: 0vh;
+}
+.Steps-Donation-List-Home-Page {
+  display: grid;
+  grid-gap: 15vh;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: left;
+  margin-left: 10vh;
+  margin-top: 0vh;
+  
+}
+
+
+li::marker{
+  color: #3dacc4 ;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 10vh;
+
+}
+
+.Money-Image-Steps-Donation-Home-Page{
+  background-image: url("/src/Images/Money-Donation.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40vh;
+  text-align:center;
+  width:60vh;
+  margin-left: 20vh;
+  margin-top: 10vh;
+  
+}
