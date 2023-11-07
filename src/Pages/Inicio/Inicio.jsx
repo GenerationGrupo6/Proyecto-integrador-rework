@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionCards } from "../Components/SectionCards/SectionCards";
+import { SectionCards } from "../../Component/SectionCards/SectionCards.jsx";
 
 function Inicio() {
   return (

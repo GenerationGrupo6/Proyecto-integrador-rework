@@ -2,14 +2,14 @@
   width: 20%;
   display: flex;
   border-radius: 1.5rem;
-  background-color: var(--main-bg-color-rgba);
   height: 47vh;
   margin-left: 2rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  background-color: var(--color-secundario);
 }
 .section-container-cards:hover {
-  background-color: var(--main-color);
+  background-color: var(--color-secundario-opa);
 }
 
 .cards-img {
