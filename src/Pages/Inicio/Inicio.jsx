@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
+import { SectionCards } from "../../Component/SectionCards/SectionCards.jsx";
 
-export const Inicio = () => {
+function Inicio() {
   return (
-    <div>Inicio</div>
-  )
+    <>
+      <SectionCards header="Nuestras Historias" />
+    </>
+  );
 }
+
+export { Inicio };

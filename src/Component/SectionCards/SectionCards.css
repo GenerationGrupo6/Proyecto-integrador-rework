@@ -1,0 +1,11 @@
+.header-cards-h2 {
+  text-align: center;
+  font-size: 4.5rem;
+}
+.text-link {
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  color: inherit;
+  text-decoration: inherit;
+}
