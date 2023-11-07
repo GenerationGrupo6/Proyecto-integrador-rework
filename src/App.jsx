@@ -1,18 +1,31 @@
-import { useState } from 'react'
-import './App.css'
-import { NavBar } from './Component/NavBar/NavBar'
+import "./App.css";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { NavBar } from "./Component/NavBar/NavBar";
+import { Inicio } from "./Pages/Inicio/Inicio";
+import { Nosotros } from "./Pages/Nosotros/Nosotros";
+import { NuestrasHistorias } from "./Pages/NuestrasHistorias/NuestrasHistorias";
+import { Contactanos } from "./Pages/Contactanos/Contactanos";
+import { Login } from "./Pages/Login/Login";
+import { UneteAlCambio } from "./Pages/UneteAlCambio/UneteAlCambio";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/nuestras-historias" element={<NuestrasHistorias />} />
+        <Route path="/contactanos" element={<Contactanos />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/unete-al-cambio" element={<UneteAlCambio />} />
+      </Routes>
       <main>
-        <NavBar />
+        
       </main>
-      
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
