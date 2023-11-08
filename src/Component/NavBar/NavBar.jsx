@@ -6,8 +6,17 @@ import { Link, NavLink } from 'react-router-dom'
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+window.addEventListener('scroll', () => {
+  const scrollCheck = document.querySelector('.NavConfig');
+  if (window.scrollY > 0) {
+    scrollCheck.classList.add('onScroll');
+  } else {
+    scrollCheck.classList.remove('onScroll');
+  }
+});
+
   return (
-    <nav className='NavConfig'>
+    <nav className='NavConfig' >
         <img id='LogoNavMobile' src={logo} alt="LogoCanastasDeVida" />
         <ul className='navBar' id={menuOpen ? 'open': ''}>
             <li className='LinkTittle'> <NavLink to='/'>INICIO</NavLink></li>
@@ -27,6 +36,7 @@ export const NavBar = () => {
             <span></span>
             <span></span>
         </div>
+        
     </nav>
   )
 }
