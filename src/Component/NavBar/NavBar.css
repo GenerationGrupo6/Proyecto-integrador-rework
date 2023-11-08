@@ -2,6 +2,7 @@
   background-color: var(--color-secundario-B);
 }
 .NavConfig {
+  background-color: ;
   width: 100vw;
   top: 0;
   position: sticky;
@@ -70,9 +71,13 @@ nav ul li a:hover:not(.active) {
     display: flex;
   }
   .navBar {
+    display: none;
     flex-direction: column;
     width: 100%;
     align-items: start;
+  }
+  #open {
+    display: flex;
   }
   .NavConfig {
     align-items: center;
