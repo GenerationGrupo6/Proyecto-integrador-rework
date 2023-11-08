@@ -6,8 +6,8 @@ import { Home2 } from "../../Component/Home/Home2.jsx";
 function Inicio() {
   return (
     <>
-      <Home/>
-      <Home2/> 
+      <Home />
+      <Home2 />
       <SectionCards header="Nuestras Historias" />
     </>
   );

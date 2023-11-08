@@ -1,166 +1,117 @@
-/* .part2Config {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-}
-.Infortation-Cloud-Section-Home-Page {
-  height: 10vh;
-  padding: 0;
-  margin: 3vh;
-}
-
-.Steps-Donation-Section-Home-Page {
-  display: flex;
-  flex-direction: column;
-  height: 50vh;
-  margin: 5vh;
-}
-
-.Steps-Donation-Fist-Division-Home-Page {
-  display: flex;
-  justify-content: left;
-  margin-top: 5vh;
-
-}
-
-.HeadersSpace-Steps-Donation-Home-Page {
-  margin: 1vh;
-  padding-left: 6vh;
-  line-height: 1.5vh;
-}
-
-.Follow-Instructions-Donation-Home-Page {
-  font-size: 4vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-style: italic;
-  width: bold;
-}
-
-.Title-Steps-Donation-Home-Page {
-  font-size: 6vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.Steps-Donation-Second-Division-Home-Page {
-  margin-top: 0vh;
-}
-.Steps-Donation-List-Home-Page {
-  display: grid;
-  grid-gap: 15vh;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  justify-content: left;
-  margin-left: 10vh;
-  margin-top: 0vh;
-  
-}
-
-
-li::marker{
-  color: #3dacc4 ;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 10vh;
-
-}
-
-.Money-Image-Steps-Donation-Home-Page{
-  background-image: url("/src/assets/Money-Donation.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 40vh;
-  text-align:center;
-  width:60vh;
-  margin-left: 20vh;
-  margin-top: 10vh;
-  
-} */
-
 .First-Container-Home-Page {
   display: flex;
 }
-.Body-Home-Page {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+.Ilustration-Section-Home-Page {
+  background-image: url("../../assets/ImagenFinal.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-width: 100vw;
+  height: 100vh;
+  max-height: 100%;
 }
 
-.Ilustration-Section-Home-Page {
+.Body-Home-Page {
   display: flex;
-  background-image: url("../../assets/try.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 1vh;
-  height: 100vh;
-  justify-content: flex-end;
-  width: 100vw;
-  text-align: right;
+  flex-direction: column;
+  align-items: center;
 }
+
 .Header-Home-Page {
+  margin-left: 1rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   line-height: 2vh;
   align-items: center;
+  justify-content: center;
 }
 .We-Feed-The-Change {
-  font-size: 3vw;
+  text-align: center;
+  font-size: max(3vw, 1.2rem);
   color: #432744;
-  margin-top: 5rem;
   line-height: 3vh;
-  margin-right: 2rem;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-.Together {
-  margin-top: 0vh;
-  margin-right: 10rem;
-  font-size: 3vw;
+.space {
+  margin-right: 1rem;
+}
+.together {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 30%;
+}
+
+/* css home2 */
+
+.part2Config {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero-section-viñetas {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.first-article-hero-section {
+  display: flex;
+  margin-top: 5vh;
+}
+
+.header-hero-section-viñetas {
+  display: flex;
+  flex-direction: row;
+  line-height: 1.5vh;
+  flex-wrap: wrap;
+}
+
+/* texto1 */
+.header-p-hero {
+  font-size: max(2vw, 1.2rem);
+  text-align: center;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-style: italic;
-  font-weight: bold;
-  color: #432744;
-  font-family: Georgia, "Times New Roman", Times, serif;
 }
-/* 
-@media (max-width: 1600px) {
-  .Ilustration-Section-Home-Page {
-    height: 80vh;
-  }
-  .Together {
-    font-size: 2vw;
-  }
-  .We-Feed-The-Change {
-    font-size: 2vw;
-  }
+/* texto2 */
+
+.header-h1-hero {
+  text-align: center;
+  width: 100%;
+  font-size: max(2vw, 1.2rem);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-@media (max-width: 1200px) {
-  .Ilustration-Section-Home-Page {
-    height: 60vh;
-  }
-  .Together {
-    font-size: 2vw;
-  }
-  .We-Feed-The-Change {
-    font-size: 2vw;
-  }
+/* image dinero */
+
+.Money-Image {
+  width: 40vw;
 }
-@media (max-width: 768px) {
-  .Ilustration-Section-Home-Page {
-    height: 40vh;
-  }
-  .Together {
-    font-size: 2vw;
-  }
-  .We-Feed-The-Change {
-    font-size: 2vw;
-  }
+.figure-money {
+  width: 100%;
+  display: flex;
+  justify-content: right;
 }
+
+.supremo {
+  margin-bottom: 20rem;
+}
+
+/* 3 puntos de informacion */
+
 @media (max-width: 480px) {
-  .Ilustration-Section-Home-Page {
-    height: 20vh;
+  .Money-Image {
+    width: 100vw;
   }
-  .Together {
-    font-size: 2vw;
+  .figure-money {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  .We-Feed-The-Change {
-    font-size: 2vw;
+  .supremo {
+    margin-bottom: 1rem;
   }
-} */
+}
