@@ -9,6 +9,22 @@ import { Link } from "react-router-dom";
 function SectionCards(props) {
   return (
     <>
+      <section className="Section-home3">
+        <ol>
+          <li>
+            <h2>Inicia Sesión</h2>
+            <p>Regístrate de forma segura en nuestra plataforma.</p>
+          </li>
+          <li>
+            <h2>Es Momento de Donar</h2>
+            <p>Establece el monto que quieres donar</p>
+          </li>
+          <li>
+            <h2>Mide el Impacto</h2>
+            <p>Visualiza cómo será ocupada tu donación</p>
+          </li>
+        </ol>
+      </section>
       <header className="header-section-cards">
         <h2 className="header-cards-h2">{props.header}</h2>
       </header>

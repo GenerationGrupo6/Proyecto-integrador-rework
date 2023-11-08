@@ -7,13 +7,15 @@ function Home() {
     <div className="First-Container-Home-Page">
       <main className="Body-Home-Page">
         <section className="Ilustration-Section-Home-Page">
-          <figure className="Full-Ilustation-Home-Page">
-            <header className="Header-Home-Page">
-              <h3 className="We-Feed-The-Change"> ALIMENTEMOS EL CAMBIO</h3>
-              <h2 className="Together">¡JUNTOS!</h2>
-            </header>
+          <header className="Header-Home-Page">
+            <div className="together">
+              <h3 className="We-Feed-The-Change">ALIMENTEMOS</h3>
+              <h3 className="We-Feed-The-Change space">EL</h3>
+              <h3 className="We-Feed-The-Change ">CAMBIO</h3>
+            </div>
+            <h2 className="We-Feed-The-Change">¡JUNTOS!</h2>
             <DonationButton />
-          </figure>
+          </header>
         </section>
         <section className="Infortation-Cloud-Section-Home-Page">
           <InformationCloud />
@@ -23,4 +25,4 @@ function Home() {
   );
 }
 
-export {Home}
+export { Home };
