@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import logo from "../../assets/Logo-sin-fondo.png";
 import "./NavBar.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  if (location.pathname === "/login") return null;
 
   window.addEventListener("scroll", () => {
     const scrollCheck = document.querySelector(".NavConfig");

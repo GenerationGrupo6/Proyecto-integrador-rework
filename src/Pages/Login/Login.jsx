@@ -1,12 +1,11 @@
 import React from "react";
-import { LoginComponent } from "../../Component/Loginc/LoginComponent";
+import { Link } from "react-router-dom";
+import logo from "../../assets/Logo-sin-fondo.png";
 
 const Login = () => {
   return (
-    <>
-      <LoginComponent />
-    </>
+    <Link to="/">
+      <img id="LogoNav" src={logo} alt="LogoCanastasDeVida" />
+    </Link>
   );
 };
-
-export { Login };
