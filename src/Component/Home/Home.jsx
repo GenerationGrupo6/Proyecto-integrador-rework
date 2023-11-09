@@ -1,7 +1,7 @@
 import "./Home.css";
 import { DonationButton } from "../DonationButton/DonationButton.jsx";
 import { InformationCloud } from "../InformationCloud/InformationCloud.jsx";
-import Moneyimg from "../../assets/Money-Donation.jpg";
+import MoneyDonation from "../../assets/Money-Donation.jpg";
 
 function Home() {
   return (
@@ -10,9 +10,9 @@ function Home() {
         <main className="Body-Home-Page">
           <section className="Ilustration-Section-Home-Page">
             <header className="Header-Home-Page">
-              <div className="together">
+              <div className="Together-Home-Page">
                 <h3 className="We-Feed-The-Change">ALIMENTEMOS</h3>
-                <h3 className="We-Feed-The-Change space">EL</h3>
+                <h3 className="We-Feed-The-Change Space">EL</h3>
                 <h3 className="We-Feed-The-Change ">CAMBIO</h3>
               </div>
               <h2 className="We-Feed-The-Change">¡JUNTOS!</h2>
@@ -24,20 +24,22 @@ function Home() {
           </section>
         </main>
       </div>
-      <div className="supremo">
-        <section className="hero-section-viñetas">
-          <article className="first-article-hero-section">
-            <header className="header-hero-section-viñetas">
-              <p className="header-p-hero">Con Canastas De Vida</p>
-              <h1 className="header-h1-hero">Donar Nunca Fue Tan Fácil</h1>
-              <div className="figure-money">
-                <img src={Moneyimg} className="Money-Image" />
+      <div className="Second-Container-Donation-Steps-Home-Page">
+        <section className="Donation-Steps-Section1-Home-Page">
+          <article className="Donation-Steps-Article-Home-Page">
+            <header className="Donation-Steps-Header-Home-Page">
+              <p className="Donation-Steps-P-Home-Page">Con Canastas De Vida</p>
+              <h1 className="Donation-Steps-H1-Home-Page">
+                Donar Nunca Fue Tan Fácil
+              </h1>
+              <div className="Donation-Steps-Figure-Money-Donation-Home-Page">
+                <img src={MoneyDonation} className="Figure-Money-Donation" />
               </div>
             </header>
           </article>
         </section>
       </div>
-      <section className="Section-home3">
+      <div className="Third-Container-Donation-Steps-Home-Page">
         <ol>
           <li>
             <h2>Inicia Sesión</h2>
@@ -52,7 +54,7 @@ function Home() {
             <p>Visualiza cómo será ocupada tu donación</p>
           </li>
         </ol>
-      </section>
+      </div>
     </>
   );
 }
