@@ -19,7 +19,7 @@ function App() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/nuestras-historias" element={<NuestrasHistorias />} />
         <Route path="/contactanos" element={<Contactanos />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/unete-al-cambio" element={<UneteAlCambio />} />
         <Route path="/Historias" element={<Historias />} />
       </Routes>
