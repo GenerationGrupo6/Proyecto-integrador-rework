@@ -9,7 +9,6 @@ function Inicio() {
     <>
       <Home />
       <Home2 />
-      {/* <Mapa /> */}
       <SectionCards header="Nuestras Historias" />
       <Mapa />
     </>
