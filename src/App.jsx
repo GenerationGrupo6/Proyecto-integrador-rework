@@ -13,7 +13,7 @@ import MapaInteractivo from "./Component/MapaInteractivo/MapaInteractivo";
 
 function App() {
   const location = window.location.pathname;
-  const HideNavBar = location === "/login" ? null : <NavBar />;
+  const HideNavBar = location === "/Login" ? null : <NavBar />;
   return (
     <BrowserRouter>
       {HideNavBar}
@@ -23,8 +23,7 @@ function App() {
         <Route path="/nuestras-historias" element={<NuestrasHistorias />} />
         <Route path="/contactanos" element={<Contactanos />} />
         <Route path="/MapaInteractivo" element={<MapaInteractivo />} />
-
-        <Route path="/login" element={<Login />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/unete-al-cambio" element={<UneteAlCambio />} />
         <Route path="/Historias" element={<Historias />} />
       </Routes>
