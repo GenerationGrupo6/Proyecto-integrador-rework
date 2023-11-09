@@ -1,0 +1,29 @@
+.ContenedorGeneral{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+
+
+}
+.Mapa {
+    width: 30vw;
+    height: 40vh;
+}
+.ContCard {
+    width: 30vw;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-secundario-B);
+    padding: 1.5rem;
+}
+.ContCard .titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}

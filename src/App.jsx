@@ -9,16 +9,19 @@ import { Contactanos } from "./Pages/Contactanos/Contactanos";
 import { Login } from "./Pages/Login/Login";
 import { UneteAlCambio } from "./Pages/UneteAlCambio/UneteAlCambio";
 import { Historias } from "./Pages/Historias/Historias";
+import MapaInteractivo from "./Component/MapaInteractivo/MapaInteractivo";
 
 function App() {
+  const location = window.location.pathname;
+  const HideNavBar = location === '/login' ? null : <NavBar />; 
   return (
     <BrowserRouter>
-      <NavBar />
+      {HideNavBar}
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/nuestras-historias" element={<NuestrasHistorias />} />
-        <Route path="/contactanos" element={<Contactanos />} />
+        <Route path="/contactanos" element={<MapaInteractivo />} />
         <Route path="/login" element={<Login />} />
         <Route path="/unete-al-cambio" element={<UneteAlCambio />} />
         <Route path="/Historias" element={<Historias />} />
