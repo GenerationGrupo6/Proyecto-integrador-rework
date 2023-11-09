@@ -90,7 +90,8 @@ nav ul li a:hover:not(.active) {
     display: none;
     flex-direction: column;
     width: 100%;
-    align-items: start;
+    align-items: center;
+    border-radius: 0;
   }
   #open {
     display: flex;
@@ -103,5 +104,14 @@ nav ul li a:hover:not(.active) {
   }
   #LogoNavMobile {
     display: flex;
+  }
+}
+@media (max-width: 375px) {
+  #LogoNavMobile {
+    position: relative;
+    right: 1rem;
+  }
+  .navBar {
+    align-items: center;
   }
 }
