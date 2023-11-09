@@ -7,13 +7,12 @@
 }
 .contenedordonaciones {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: start;
-    padding: 2rem;
+    padding: 4rem;
     width: 50vw;
     height: 100%;
     background-color:var(--color-primario-B);
+    border-start-start-radius:  10px ;
+    border-bottom-left-radius: 10px;
 }
 .cajadedonaciones{
     display: flex;
@@ -22,57 +21,25 @@
     width:30vw;
     
 }
-.donacionanonima{
-   
-    font-size: 14px;
+.donacionanonima,
+.nombredonante,
+.montodonacion,
+.destinodonacion {
+    font-size: 20px;
     text-align: justify;
-    
 }
-.nadiesabe{
-    
-    font-size: 14px;
+.nadiesabe,
+.elplatuo,
+.laplata,
+.desticomunas {
+    font-size: 20px;
     text-align: justify;
-    
-}
-.nombredonante{
-    
-    font-size: 14px;
-    text-align: justify;
-    justify-content: start;
-    
-}
-.elplatuo{
-    
-    font-size: 14px;
-    text-align: justify;
-    
-}
-.montodonacion{
-   
-    font-size: 14px;
-    text-align: justify;
-   
-}
-.laplata{
-    
-    font-size: 14px;
-    text-align: justify;
-          
-}
-.destinodonacion{
-   
-    font-size: 14px;
-    text-align: justify;
-    
-}
-.desticomunas{
-    
-    font-size: 14px;
-    text-align: justify;
-    
+    border-radius: 10px;
+    background-color:var(--color-secundario);
 }
 .guardardonacion{
-    background-color: red;
+    background-color: var(--color-secundario-B);
     height: 3rem;
     width: 10rem;
+    border-radius: 10px;
 }
