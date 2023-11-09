@@ -118,9 +118,14 @@
   }
 }
 
+<<<<<<< HEAD
 
 /* home */
 .Third-Container-Donation-Steps-Home-Page {
+=======
+/* home */
+.Section-home3 {
+>>>>>>> f27a9b5c83f1b15710dc1b89035c301dd1b8012e
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -128,7 +133,11 @@
   justify-content: center;
 }
 
+<<<<<<< HEAD
 .Third-Container-Donation-Steps-Home-Page ol {
+=======
+.Section-home3 ol {
+>>>>>>> f27a9b5c83f1b15710dc1b89035c301dd1b8012e
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
@@ -137,7 +146,11 @@
   width: 80%;
 }
 
+<<<<<<< HEAD
 .Third-Container-Donation-Steps-Home-Page ol li {
+=======
+.Section-home3 ol li {
+>>>>>>> f27a9b5c83f1b15710dc1b89035c301dd1b8012e
   width: 25%;
 }
 
@@ -149,12 +162,20 @@ li::marker {
 }
 
 @media (max-width: 1480px) {
+<<<<<<< HEAD
   .Third-Container-Donation-Steps-Home-Page {
+=======
+  .Section-home3 {
+>>>>>>> f27a9b5c83f1b15710dc1b89035c301dd1b8012e
     margin-left: 0rem;
   }
 }
 @media (max-width: 800px) {
+<<<<<<< HEAD
   .Third-Container-Donation-Steps-Home-Page ol {
+=======
+  .Section-home3 ol {
+>>>>>>> f27a9b5c83f1b15710dc1b89035c301dd1b8012e
     flex-direction: column;
   }
 }

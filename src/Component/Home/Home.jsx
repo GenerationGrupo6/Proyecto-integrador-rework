@@ -1,7 +1,7 @@
 import "./Home.css";
 import { DonationButton } from "../DonationButton/DonationButton.jsx";
 import { InformationCloud } from "../InformationCloud/InformationCloud.jsx";
-import Moneyimg from "../../assets/Money-Donation.jpg";
+import MoneyDonation from "../../assets/Money-Donation.jpg";
 
 function Home() {
   return (
@@ -33,7 +33,7 @@ function Home() {
                 Donar Nunca Fue Tan Fácil
               </h1>
               <div className="Donation-Steps-Figure-Money-Donation-Home-Page">
-                <img src={Moneyimg} className="Figure-Money-Donation" />
+                <img src={MoneyDonation} className="Figure-Money-Donation" />
               </div>
             </header>
           </article>
