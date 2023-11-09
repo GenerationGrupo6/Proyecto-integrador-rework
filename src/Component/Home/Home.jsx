@@ -1,7 +1,7 @@
 import "./Home.css";
 import { DonationButton } from "../DonationButton/DonationButton.jsx";
 import { InformationCloud } from "../InformationCloud/InformationCloud.jsx";
-import MoneyDonation from "../../assets/Money-Donation.jpg";
+import MoneyDonation from "../../assets/Money-Donation-removebg-preview.png";
 
 function Home() {
   return (
