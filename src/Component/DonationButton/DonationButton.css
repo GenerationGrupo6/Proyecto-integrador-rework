@@ -1,24 +1,21 @@
 .Donation-Button {
-  border-radius: 100px ;
-  height: 40px;
-  background-color: #f1a057 ;
-  cursor: pointer ;
+  border-radius: 50px;
+  background-color: #f1a057;
+  cursor: pointer;
   user-select: none;
-  color: white ;
-  width: 30vh ;
+  color: white;
+  font-size: 1.125rem;
   opacity: 0.9;
-  font-size: 2.5vh;
   font-family: Arial;
   font-style: bold;
   border: none;
   box-shadow: 0px 2px 2px 0px black;
-  line-height: 7vh;
-  margin-right: 35vh;
-
+  height: fit-content;
+  margin-top: 2rem;
+  min-height: 3.5rem;
+  min-width: 12rem;
 }
 
-
-
 .Donation-Button:hover {
-  background-color:orangered;
+  background-color: orangered;
 }

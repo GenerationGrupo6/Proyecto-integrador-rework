@@ -1,14 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 import logo from '../../assets/Logo-sin-fondo.png'
 import './NavBar.css'
 import { Link, NavLink } from 'react-router-dom'
 
 export const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+window.addEventListener('scroll', () => {
+  const scrollCheck = document.querySelector('.NavConfig');
+  if (window.scrollY > 0) {
+    scrollCheck.classList.add('onScroll');
+  } else {
+    scrollCheck.classList.remove('onScroll');
+  }
+});
 
   return (
-    <nav className='NavConfig'>
+    <nav className='NavConfig' >
         <img id='LogoNavMobile' src={logo} alt="LogoCanastasDeVida" />
-        <ul className='navBar'>
+        <ul className='navBar' id={menuOpen ? 'open': ''}>
             <li className='LinkTittle'> <NavLink to='/'>INICIO</NavLink></li>
             <li className='LinkTittle'> <NavLink to='/nosotros'>NOSOTROS</NavLink></li>
             <li className='LinkTittle'> <NavLink to='/nuestras-historias'>NUESTRAS HISTORIAS</NavLink></li>
@@ -19,11 +29,14 @@ export const NavBar = () => {
             <li className='LinkTittle'> <NavLink to='/login'>LOGIN</NavLink></li>
             <li className='LinkTittle'> <NavLink to='/unete-al-cambio'>UNETE AL CAMBIO</NavLink></li>
         </ul>
-        <div className='Menu'>
+        <div className='Menu' onClick={()=>{
+          setMenuOpen(!menuOpen);
+        }}>
             <span></span>
             <span></span>
             <span></span>
         </div>
+        
     </nav>
   )
 }
