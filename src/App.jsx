@@ -9,6 +9,7 @@ import { Contactanos } from "./Pages/Contactanos/Contactanos";
 import { Login } from "./Pages/Login/Login";
 import { UneteAlCambio } from "./Pages/UneteAlCambio/UneteAlCambio";
 import { Historias } from "./Pages/Historias/Historias";
+// import { NuestroMapa } from "./Pages/NuestroMapa/NuestroMapa";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/contactanos" element={<Contactanos />} />
         <Route path="/login" element={<Login />} />
         <Route path="/unete-al-cambio" element={<UneteAlCambio />} />
+        {/* <Route path="/NuestroMapa" element={<NuestroMapa />} /> */}
         <Route path="/Historias" element={<Historias />} />
       </Routes>
       <main></main>
