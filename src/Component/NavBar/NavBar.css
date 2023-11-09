@@ -91,6 +91,7 @@ nav ul li a:hover:not(.active) {
     flex-direction: column;
     width: 100%;
     align-items: start;
+    border-radius: 0;
   }
   #open {
     display: flex;
