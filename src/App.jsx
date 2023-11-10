@@ -13,13 +13,15 @@ import { Registro } from "./Pages/Registro/Registro";
 import MapaInteractivo from "./Component/MapaInteractivo/MapaInteractivo";
 
 function App() {
+
   const location = window.location.pathname;
   const HideNavBar =
     location === "/Login" || location === "/Registro" ? null : <NavBar />;
 
+
   return (
     <BrowserRouter>
-      {HideNavBar}
+      <NavBar />
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/nosotros" element={<Nosotros />} />
