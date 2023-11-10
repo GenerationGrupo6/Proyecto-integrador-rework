@@ -18,7 +18,7 @@
 
 .Header-Home-Page {
   margin-left: 1rem;
-  margin-top: 5rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   line-height: 2vh;
@@ -26,7 +26,7 @@
   justify-content: center;
 }
 
-.Together-Home-Page{
+.Together-Home-Page {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -35,16 +35,14 @@
 
 .We-Feed-The-Change {
   text-align: center;
-  font-size: max(3vw, 1.2rem);
+  font-size: max(2vw, 1.2rem);
   color: #432744;
-  line-height: 3vh;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .Space {
   margin-right: 1rem;
 }
-
 
 .Second-Container-Donation-Steps-Home-Page {
   margin-bottom: 20rem;
@@ -93,14 +91,12 @@
   width: 40vw;
 }
 
-
 .part2Config {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
 }
-
 
 /* 3 puntos de informacion */
 
@@ -117,7 +113,6 @@
     margin-bottom: 1rem;
   }
 }
-
 
 /* home */
 .Third-Container-Donation-Steps-Home-Page {
