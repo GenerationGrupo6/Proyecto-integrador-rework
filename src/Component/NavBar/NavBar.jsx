@@ -32,7 +32,7 @@ export const NavBar = () => {
         </li>
         <li className="LinkTittle">
           {" "}
-          <NavLink to="/historias">NUESTRAS HISTORIAS</NavLink>
+          <NavLink to="/Historias">NUESTRAS HISTORIAS</NavLink>
         </li>
         <Link to="/">
           <img id="LogoNav" src={logo} alt="LogoCanastasDeVida" />

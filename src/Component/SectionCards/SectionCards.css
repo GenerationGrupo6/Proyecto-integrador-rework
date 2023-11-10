@@ -1,6 +1,11 @@
+.header-section-card {
+  display: flex;
+}
+
 .header-cards-h2 {
   text-align: center;
   font-size: 4.5rem;
+  width: 100%;
 }
 .text-link {
   justify-content: center;
@@ -9,7 +14,3 @@
   color: inherit;
   text-decoration: inherit;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> f27a9b5c83f1b15710dc1b89035c301dd1b8012e

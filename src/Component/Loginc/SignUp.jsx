@@ -56,9 +56,6 @@ function SignUp() {
               <input type="password" placeholder="Contraseña" />
             </div>
           </div>
-          <div className="forgot-password">
-            <span>¿Olvidaste tu contraseña?</span>
-          </div>
           <div className="submit-container">
             <button className="registrarse-login-button">Registrarse</button>
           </div>
