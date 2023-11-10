@@ -1,9 +1,35 @@
 .Container-Arguments-Why-Canastas-De-Vida-About-Us-Page{
-    min-height: 600px;
+    width: 180vh;
+    height: 50vh;
+    margin:10px 10px 50px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    box-shadow: 0 3px 13px 1px rgb(0 0 0/ 9%);
+}
 
+.Image-Arguments-Why-Canastas-De-Vida-About-Us-Page{
+    height: 100%;
+    width: auto;
+}
 
+.Text-Arguments-Why-Canastas-De-Vida-About-Us-Page{
+    
+    text-align: center;
+    padding: 10vh;
+    font-weight: 2vh;
+    line-height: 1.5rem;
 
+}
+
+.Title-Arguments-Why-Canastas-De-Vida-About-Us-Page{
+    font-size: 3vh;
+
+}
+
+.Reason-Arguments-Why-Canastas-De-Vida-About-Us-Page{
+    font-size: 2.5vh;
+    text-align: justify;
 
 }
