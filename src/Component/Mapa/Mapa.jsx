@@ -1,6 +1,7 @@
 import React from "react";
 import "./Mapa.css";
 import Santiago from "../../assets/santiago-map.png";
+import { Link } from "react-router-dom";
 
 const Mapa = () => {
   return (
@@ -17,7 +18,7 @@ const Mapa = () => {
             corporis adipisci voluptate deleniti omnis rerum, facilis temporibus
             dolorem quod. Corporis, consequuntur.
           </p>
-          <Link to="/asfas">
+          <Link to="/MapaInteractivo2">
             <button className="btn">Ver más</button>
           </Link>
         </div>
