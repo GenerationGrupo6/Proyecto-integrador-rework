@@ -4,6 +4,7 @@
   --color-primario-B: #387ca3;
   --color-secundario: #eebc63;
   --color-secundario-B: #eea24a;
+  --color-active:#A2401B;
   --color-secundario-opa: rgba(238, 188, 99, 0.3);
 }
 #root {
