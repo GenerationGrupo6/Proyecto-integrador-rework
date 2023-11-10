@@ -93,8 +93,7 @@ function Nosotros() {
       <section className="Be-Volunteer-Section-About-Us-Page">
         <h4>¿Te gustaría ayudar directamente?</h4>
         <h1>Sé Voluntario</h1>
-        <form>
-        </form>
+        
       </section>
     </main>
   );
