@@ -12,11 +12,10 @@ import { Historias } from "./Pages/Historias/Historias";
 import MapaInteractivo from "./Component/MapaInteractivo/MapaInteractivo";
 
 function App() {
-  const location = window.location.pathname;
-  const HideNavBar = location === '/login' ? null : <NavBar />; 
+
   return (
     <BrowserRouter>
-      {HideNavBar}
+      <NavBar />
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/nosotros" element={<Nosotros />} />
