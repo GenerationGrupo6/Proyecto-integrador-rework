@@ -1,11 +1,12 @@
 import React from "react";
 import "./LoginComponent.css";
+import user_icon from "../../assets/person.png";
 import email_icon from "../../assets/email.png";
 import password_icon from "../../assets/password.png";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Logo-sin-fondo.png";
 
-function LoginComponent() {
+function SignUp() {
   return (
     <>
       <div className="container-login-all">
@@ -21,20 +22,33 @@ function LoginComponent() {
           </div>
         </section>
         <section className="login-container-right">
-          <header className="login-register">
+          <header>
             <p>
-              ¿No tienes cuenta?{" "}
-              <Link to="/Registro">
-                <span>Regístrate</span>
+              ¿Ya tienes una cuenta?{" "}
+              <Link to="/Login">
+                <span>Inicia sesion</span>
               </Link>
             </p>
           </header>
           <div className="login-Datos-right">Datos de tu Cuenta</div>
 
           <div className="inputs">
+            <div className="input input-nombre">
+              <img src={user_icon} alt="Ingrese Nombre" />
+              <input type="text" placeholder="Nombre" />
+            </div>
+            <div className="input input-apellido">
+              <img src={user_icon} alt="Apellidos" />
+              <input type="text" placeholder="Apellidos" />
+            </div>
+
             <div className="input">
               <img src={email_icon} alt="Ingrese Correo" />
               <input type="email" placeholder="Direccion de Email" />
+            </div>
+            <div className="input">
+              <img src={email_icon} alt="Ingrese Correo nuevamente" />
+              <input type="email" placeholder="Confirma tu Email" />
             </div>
 
             <div className="input">
@@ -46,7 +60,7 @@ function LoginComponent() {
             <span>¿Olvidaste tu contraseña?</span>
           </div>
           <div className="submit-container">
-            <button className="registrarse-login-button">Iniciar Sesion</button>
+            <button className="registrarse-login-button">Registrarse</button>
           </div>
         </section>
       </div>
@@ -54,4 +68,4 @@ function LoginComponent() {
   );
 }
 
-export { LoginComponent };
+export { SignUp };

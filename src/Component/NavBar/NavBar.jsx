@@ -6,7 +6,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  if (location.pathname === "/login") return null;
+  if (location.pathname === "/Login") return null;
+  if (location.pathname === "/Registro") return null;
 
   window.addEventListener("scroll", () => {
     const scrollCheck = document.querySelector(".NavConfig");
