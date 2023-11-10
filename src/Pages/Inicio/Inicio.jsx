@@ -9,8 +9,8 @@ function Inicio() {
     <>
       <Home />
       <SectionCards header="Nuestras Historias" />
-      <VenDonaciones/>
       <Mapa/>
+      <VenDonaciones/>
     </>
   );
 }
