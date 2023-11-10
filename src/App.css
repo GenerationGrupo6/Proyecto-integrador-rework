@@ -1,5 +1,5 @@
 :root {
-  --image-color: #b0e6fe;
+  --image-color: white;
   --color-primario: #56b6d6;
   --color-primario-B: #387ca3;
   --color-secundario: #eebc63;
@@ -9,7 +9,7 @@
 }
 #root {
   max-width: 100vw;
-  font-family: "Edu TAS Beginner", cursive;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {

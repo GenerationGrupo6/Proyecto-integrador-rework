@@ -1,0 +1,116 @@
+.container-login-all {
+  display: flex;
+  justify-content: center;
+}
+.login-container-left {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+}
+.article-container-left {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  justify-content: flex-end;
+  align-items: center;
+}
+.article-login-p {
+  font-size: 1.5rem;
+  width: 80%;
+}
+.article-login-h1 {
+  font-size: 3rem;
+  width: 80%;
+}
+.login-container-right {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 70%;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: whitesmoke;
+}
+
+.login-Datos-right {
+  color: black;
+  font-size: 2.125rem;
+  text-align: center;
+}
+
+.inputs {
+  margin-top: 2rem;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  height: 2.8rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+}
+.input-apellido {
+  width: 48%;
+}
+.input-nombre {
+  width: 48%;
+}
+
+.input img {
+  margin: 0px 1rem;
+}
+.login-register {
+  font-size: 1.125rem;
+}
+
+.input input {
+  height: 50px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 1rem;
+}
+
+.forgot-password {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 59px;
+  width: 5rem;
+  color: black;
+  background: lightsteelblue;
+  border-radius: 50px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.gray {
+  background: #eaeaea;
+  color: black;
+}
