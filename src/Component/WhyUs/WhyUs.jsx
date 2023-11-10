@@ -2,7 +2,8 @@ import React from "react";
 import "./WhyUs.css";
 
 function WhyUs(props) {
-  return (
+    return (
+
     <div className="Container-Arguments-Why-Canastas-De-Vida-About-Us-Page">
       <img
         className="Image-Arguments-Why-Canastas-De-Vida-About-Us-Page"

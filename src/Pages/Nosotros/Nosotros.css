@@ -54,7 +54,6 @@
 .Text-Third-Container-About-Us-Page {
   justify-content: center;
   margin: 8vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .Fourth-Section-About-Us-Page {
@@ -71,10 +70,24 @@
 
 .H1-Fourth-Section-About-Us-Page {
   font-size: 5vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .Fifth-Section-About-Us-Page {
   display: inline-flex;
   margin-inline-start: 2rem;
+  height: 65vh;
+}
+
+.Why-Canastas-De-Vida-Section-About-Us-Page {
+  min-height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.H1-Why-Canastas-De-Vida-Section-About-Us-Page {
+  font-size: 5vh;
+  margin-bottom: 8vh;
 }

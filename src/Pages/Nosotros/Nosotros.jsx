@@ -7,7 +7,7 @@ import NosotrosFelipe from "../../assets/NosotrosFelipe.png";
 import NosotrosDavid from "../../assets/NosotrosDavid.jpeg";
 import NosotrosGonzalo from "../../assets/NosotrosGonzalo.png";
 import NosotrosMoira from "../../assets/NosotrosMoira.png";
-/*import foodDonation from "../../assets/foodDonation"*/
+import TeamWork from "../../assets/TeamWork.jpg";
 import { WhyUs } from "../../Component/WhyUs/WhyUs";
 
 function Nosotros() {
@@ -37,15 +37,39 @@ function Nosotros() {
           aliquid perspiciatis omnis atque.
         </p>
       </section>
+      <section className="Why-Canastas-De-Vida-Section-About-Us-Page">
+        <article className="Article-Why-Canastas-De-Vida-Section-About-Us-Page">
+          <h1 className="H1-Why-Canastas-De-Vida-Section-About-Us-Page">
+            ¿Por Qué Canastas de Vida?
+          </h1>
+        </article>
+        <WhyUs
+          image={TeamWork}
+          title="Impacto Directo en Comunidades Vulnerables"
+          reason="Cada donación que recibimos se traduce en un impacto directo en las comunidades más vulnerables de Santiago. A través de nuestras iniciativas, llevamos alimentos esenciales a hogares que lo necesitan desesperadamente, construyendo puentes de solidaridad y esperanza."
+        />
+        <WhyUs
+          image={TeamWork}
+          title="Transparencia y Responsabilidad"
+          reason="Valoramos tu confianza y creemos en la transparencia total. Cada donación se gestiona con responsabilidad, y te mantenemos informado sobre cómo tus contribuciones están marcando la diferencia. Nos esforzamos por construir una relación basada en la honestidad y la responsabilidad."
+        />
+        <WhyUs
+          image={TeamWork}
+          title="Historias de Transformación y Esperanza"
+          reason="Detrás de cada canasta hay una historia de transformación y esperanza. Compartimos historias conmovedoras de aquellos cuyas vidas han cambiado gracias a tu generosidad. Cada donación no solo alimenta cuerpos, sino que también nutre almas y construye un tejido de esperanza en nuestra comunidad."
+        />
+        <WhyUs
+          image={TeamWork}
+          title="Compromiso con el Cambio Social Sostenible"
+          reason="En Canastas de Vida, no solo proporcionamos ayuda inmediata; también nos comprometemos con el cambio social sostenible. Apoyamos proyectos a largo plazo que fortalecen a las comunidades, fomentan el desarrollo y construyen un futuro más equitativo."
+        />
+      </section>
       <section className="Fourth-Section-About-Us-Page">
         <article className="Article-Fourth-Section-About-Us-Page">
           <h1 className="H1-Fourth-Section-About-Us-Page">
             Somos quienes soñaron con el cambio
           </h1>
         </article>
-      </section>
-      <section className="Why-Canastas-De-Vida-Section-About-Us-Page">
-        <h1 className=""></h1>
       </section>
       <section className="Fifth-Section-About-Us-Page">
         <TeamMembers image={NosotrosFelipe} name="Felipe Frias" age="27 años" />
@@ -66,14 +90,12 @@ function Nosotros() {
           age="21 años"
         />
       </section>
-      <section className="Why-Canastas-De-Vida-Section-About-Us-Page">
-        <article className="Article-Why-Canastas-De-Vida-Section-About-Us-Page">
-          <h1 className="">¿Por Qué Canastas de Vida?</h1>
-        </article>
-        <WhyUs/>
-
+      <section className="Be-Volunteer-Section-About-Us-Page">
+        <h4>¿Te gustaría ayudar directamente?</h4>
+        <h1>Sé Voluntario</h1>
+        <form>
+        </form>
       </section>
-      <section className="Be-Volunteer-Section-About-Us-Page"></section>
     </main>
   );
 }
