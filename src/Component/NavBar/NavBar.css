@@ -12,6 +12,7 @@
   top: 1rem;
   width: 100vw;
   border-radius: 0;
+  margin-bottom: 2rem;
 }
 .onScroll {
   background-color: whitesmoke;
@@ -92,6 +93,7 @@ nav ul li a:hover:not(.active) {
     width: 100%;
     align-items: center;
     border-radius: 0;
+
   }
   #open {
     display: flex;
