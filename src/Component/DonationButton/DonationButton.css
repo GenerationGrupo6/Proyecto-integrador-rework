@@ -6,7 +6,7 @@
   color: white;
   font-size: 1.125rem;
   opacity: 0.9;
-  font-family: Arial;
+  font-family: "Edu TAS Beginner";
   font-style: bold;
   border: none;
   box-shadow: 0px 2px 2px 0px black;
@@ -14,6 +14,7 @@
   margin-top: 2rem;
   min-height: 3.5rem;
   min-width: 12rem;
+  
 }
 
 .Donation-Button:hover {
