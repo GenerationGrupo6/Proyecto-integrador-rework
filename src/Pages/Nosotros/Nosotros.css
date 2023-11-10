@@ -13,23 +13,23 @@
 
 .H2-First-Section-About-Us-Page {
   font-size: 3vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .H1-First-Section-About-Us-Page {
   font-size: 6vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.H3-First-Section-About-Us-Page{
-    font-size: 4vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.H3-First-Section-About-Us-Page {
+  font-size: 4vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 0vh;
   margin-top: 0vh;
 }
 
 .Second-Section-Image-About-Us-Page {
-  background-color:  #fafafa ;
+  background-color: #fafafa;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -42,8 +42,6 @@
   display: flex;
   flex-direction: column;
   width: 50vw;
-
-  
 }
 
 .Third-Section-About-Us-Page {
@@ -51,13 +49,12 @@
   flex-direction: column;
   text-align: center;
   line-height: 5vh;
-  
 }
 
 .Text-Third-Container-About-Us-Page {
   justify-content: center;
   margin: 8vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .Fourth-Section-About-Us-Page {
@@ -68,13 +65,13 @@
 }
 
 .Article-Fourth-Section-About-Us-Page {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .H1-Fourth-Section-About-Us-Page {
-    font-size: 5vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 5vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .Fifth-Section-About-Us-Page {

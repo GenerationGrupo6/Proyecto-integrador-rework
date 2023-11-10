@@ -8,6 +8,8 @@
   flex-direction: column;
 }
 .article-container-left {
+  margin-top: 4rem;
+
   display: flex;
   flex-direction: column;
   height: 30vh;
