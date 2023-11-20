@@ -9,6 +9,7 @@ import NosotrosGonzalo from "../../assets/NosotrosGonzalo.png";
 import NosotrosMoira from "../../assets/NosotrosMoira.png";
 import TeamWork from "../../assets/TeamWork.jpg";
 import { WhyUs } from "../../Component/WhyUs/WhyUs";
+import { VolunteerForm } from "../../Component/VolunteerForm/VolunteerForm";
 
 function Nosotros() {
   return (
@@ -91,10 +92,28 @@ function Nosotros() {
         />
       </section>
       <section className="Be-Volunteer-Section-About-Us-Page">
-        <h4>¿Te gustaría ayudar directamente?</h4>
-        <h1>Sé Voluntario</h1>
-        <form>
-        </form>
+        <article className="Article-Be-Volunteer-Section-About-Us-Page">
+          <h4>¿Te gustaría ayudar directamente?</h4>
+          <h1>Sé Voluntario</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            magnam ullam suscipit consequuntur? Quasi repellat accusamus maxime
+            distinctio assumenda exercitationem obcaecati itaque quibusdam,
+            optio eveniet ab sint fugit odio perspiciatis!
+          </p>
+        </article>
+        <article className="Form-Article-Be-Volunteer-Section-About-Us-Page">
+          <h1 className="H1-Volunteer-Form-About-Us-Page">
+            Formulario Solicitud Voluntariado
+          </h1>
+          <h6
+            className="H6-Volunteer-Form-About-Us-Page"
+            style={{ color: "red" }}
+          >
+            Sólo para Región Metropolitana
+          </h6>
+          <VolunteerForm />
+        </article>
       </section>
     </main>
   );
