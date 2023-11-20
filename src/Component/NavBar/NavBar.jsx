@@ -10,7 +10,9 @@ export const NavBar = () => {
   if (location.pathname === "/Registro") return null;
 
   window.addEventListener("scroll", () => {
+
     const scrollCheck = document.querySelector(".NavConfig");
+    if (!scrollCheck) return;
     if (window.scrollY > 0) {
       scrollCheck.classList.add("onScroll");
     } else {

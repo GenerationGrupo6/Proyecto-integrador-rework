@@ -12,6 +12,7 @@ const MapaInteractivo = () => {
     paths.forEach((path) => {
       path.style.fill = "var(--color-secundario)";
     });
+    //probar con clase.
 
     if (target !== null) {
       const pathActual = document.getElementById(target);
