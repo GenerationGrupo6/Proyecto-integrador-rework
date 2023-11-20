@@ -10,6 +10,7 @@ import { UneteAlCambio } from "./Pages/UneteAlCambio/UneteAlCambio";
 import { Historias } from "./Pages/Historias/Historias";
 import { Registro } from "./Pages/Registro/Registro";
 import { MapaInteractivo2 } from "./Pages/MapaInteractivo2/MapaInteractivo2";
+import { HowDoesIt2} from "./Pages/ComoFunciona/ComoFunciona";
 
 function App() {
   const location = window.location.pathname;
@@ -22,12 +23,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/nosotros" element={<Nosotros />} />
-        <Route path="/nuestras-historias" element={<NuestrasHistorias />} />
         <Route path="/contactanos" element={<Contactanos />} />
         <Route path="/login" element={<Login />} />
         <Route path="/unete-al-cambio" element={<UneteAlCambio />} />
         <Route path="/Historias" element={<Historias />} />
         <Route path="/MapaInteractivo2" element={<MapaInteractivo2 />} />
+        <Route path="/HowDoesIt2" element={<HowDoesIt2 />} />
       </Routes>
       <main></main>
     </BrowserRouter>

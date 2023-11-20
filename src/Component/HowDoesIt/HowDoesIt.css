@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.container-how {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.container-how-to {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+    background-color: #f3efeb;
+    border-radius: 40px; 
+
+}
+
+header {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+main {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; 
+    text-align: center;
+}
+
+.imagen-how {
+    width: 900px;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    padding: 2rem 2rem;
+}
+
+.txt-how {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.txt-fade {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+ .btn-help {
+    display: grid;
+    place-items: center;
+ }
+
+ .btn-how {
+    color: #fff;
+    background-color: #f1a057;
+    opacity: 0.9;
+    /* padding: 6px 20px;  */
+    border: none;
+    border-radius: 50px;
+    font-size: 1.125rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    height: fit-content;
+    box-shadow: 0px 2px 2px 0px #515151;
+    margin-top: 2rem;
+    min-height: 3.5rem;
+    min-width: 12rem;
+ }
+
+ .btn-how:hover {
+    background-color: orangered;
+    cursor: pointer;
+    transition: background-color 0.3s;
+ }

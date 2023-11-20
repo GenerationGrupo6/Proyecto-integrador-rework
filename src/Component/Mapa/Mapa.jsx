@@ -13,10 +13,7 @@ const Mapa = () => {
           <h1>Conoce nuestro mapa</h1>
           <h4>Donde puedes ayudar</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
-            incidunt consectetur saepe labore quam nam repudiandae autem itaque
-            corporis adipisci voluptate deleniti omnis rerum, facilis temporibus
-            dolorem quod. Corporis, consequuntur.
+          Descubre nuestro mapa interactivo que muestra todas las comunas de la Región Metropolitana junto con su índice de prioridad social. Esta herramienta visual ofrece una comprensión rápida de las necesidades específicas de cada comunidad, permitiéndonos dirigir nuestros esfuerzos de manera estratégica para maximizar el impacto positivo en las áreas más vulnerables.
           </p>
           <Link to="/MapaInteractivo2">
             <button className="btn">Ver más</button>
@@ -30,13 +27,7 @@ const Mapa = () => {
         <h4>Nuestra Misión</h4>
         <h2 className="header">CANASTAS DE VIDA NACE PARA AYUDAR</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum neque
-          facere vitae dicta, illo quam ullam maiores impedit, dolores
-          praesentium nemo voluptatibus eum quisquam voluptatem doloribus iusto,
-          consequatur dignissimos. Nihil! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Exercitationem, quisquam ex quidem nemo quis tempora
-          repellendus nam sit iste laboriosam deserunt, veniam suscipit
-          voluptatibus consequatur nihil beatae? Quam, iure provident.
+        La misión de Canastas de Vida es aliviar las carencias alimentarias y promover el bienestar en comunidades vulnerables. Nos comprometemos a proporcionar canastas de alimentos esenciales con un enfoque centrado en la dignidad humana. A través de la solidaridad y la generosidad de donantes, buscamos construir puentes de apoyo que fortalezcan los lazos comunitarios y generen un impacto positivo y duradero en la vida de aquellos que enfrentan dificultades. Nuestra labor se orienta hacia la creación de un cambio tangible y sostenible, donde cada canasta entregada represente un rayo de esperanza y un paso hacia la construcción de un futuro más próspero para todos.
         </p>
       </section>
     </>
