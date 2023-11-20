@@ -36,10 +36,13 @@
     text-align: justify;
     border-radius: 10px;
     background-color:var(--color-secundario);
+    font-family: 'Poppins', sans-serif;
 }
 .guardardonacion{
     background-color: var(--color-secundario-B);
     height: 3rem;
     width: 10rem;
     border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size:15px;
 }

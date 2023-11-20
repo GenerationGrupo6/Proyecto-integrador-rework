@@ -1,0 +1,33 @@
+.Members-Cards-Fifth-Section-About-Us-Page {
+  display: flex;
+  flex-direction: column;
+  margin:2rem;
+  width: 29vh;
+  
+}
+
+.Single-Members-Card-Fifth-Section-About-Us-Page {
+  width: 100%;
+
+  
+}
+
+.Image-Members-Card-Fifth-Section-About-Us-Page {
+  height: 100%;
+  width: 100%;
+  border-radius: 9rem;
+}
+
+.Text-Members-Card-Fifth-Section-About-Us-Page {
+  margin:rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0vh;
+  
+}
+
+.Name-Members-Card-Fifth-Section-About-Us-Page {
+  text-align: center;
+  font-size: 1.2rem;
+}

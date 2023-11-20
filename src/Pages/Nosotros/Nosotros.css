@@ -1,0 +1,93 @@
+.Father-Container-About-Us-Page {
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+
+.First-Section-About-Us-Page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 5vh;
+  margin-top: 8vh;
+}
+
+.H2-First-Section-About-Us-Page {
+  font-size: 3vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.H1-First-Section-About-Us-Page {
+  font-size: 6vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.H3-First-Section-About-Us-Page {
+  font-size: 4vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 0vh;
+  margin-top: 0vh;
+}
+
+.Second-Section-Image-About-Us-Page {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 5vh;
+  margin-top: 8vh;
+  height: 70vh;
+}
+
+.Image-About-Us-Page {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.Third-Section-About-Us-Page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 5vh;
+}
+
+.Text-Third-Container-About-Us-Page {
+  justify-content: center;
+  margin: 8vh;
+}
+
+.Fourth-Section-About-Us-Page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 3vh;
+}
+
+.Article-Fourth-Section-About-Us-Page {
+  display: flex;
+  flex-direction: column;
+}
+
+.H1-Fourth-Section-About-Us-Page {
+  font-size: 5vh;
+}
+
+.Fifth-Section-About-Us-Page {
+  display: inline-flex;
+  margin-inline-start: 2rem;
+  height: 65vh;
+}
+
+.Why-Canastas-De-Vida-Section-About-Us-Page {
+  min-height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.H1-Why-Canastas-De-Vida-Section-About-Us-Page {
+  font-size: 5vh;
+  margin-bottom: 8vh;
+}
