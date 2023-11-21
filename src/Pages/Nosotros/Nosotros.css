@@ -77,12 +77,14 @@
 .Fifth-Section-About-Us-Page {
   display: flex;
   height: 100%;
-  width: 100%;
+  width: auto;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .Why-Canastas-De-Vida-Section-About-Us-Page {
@@ -151,10 +153,8 @@
   line-height: 0rem;
 }
 
-.H1-Volunteer-Form-About-Us-Page{
-
+.H1-Volunteer-Form-About-Us-Page {
 }
 
-.H6.Volunteer-Form-About-Us-Page{
-  
+.H6.Volunteer-Form-About-Us-Page {
 }
