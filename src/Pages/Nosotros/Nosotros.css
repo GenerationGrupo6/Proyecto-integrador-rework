@@ -94,6 +94,7 @@
 
 .Be-Volunteer-Section-About-Us-Page {
   height: 100vh;
+
   display: flex;
   flex-direction: row;
   padding: 2%;
@@ -111,6 +112,7 @@
   text-align: center;
   border-radius: 20%;
   box-shadow: 0 3px 13px 1px rgb(0 0 0/ 9%);
+
 }
 
 .Form-Article-Be-Volunteer-Section-About-Us-Page {
@@ -126,6 +128,8 @@
   box-shadow: 0 3px 13px 1px rgb(0 0 0/ 9%);
 }
 
+
 .Information-Cloud {
   display: flex;
 }
+
