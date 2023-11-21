@@ -7,10 +7,10 @@
 }
 .contenedordonaciones {
     display: flex;
-    padding: 4rem;
+    padding: 5rem;
     width: 50vw;
     height: 100%;
-    background-color:var(--color-primario-B);
+    background-color:var(--color-primario);
     border-start-start-radius:  10px ;
     border-bottom-left-radius: 10px;
 }
@@ -21,16 +21,15 @@
     width:30vw;
     
 }
-.donacionanonima,
-.nombredonante,
+
 .montodonacion,
 .destinodonacion {
     font-size: 20px;
     text-align: justify;
+    
 }
-.nadiesabe,
-.elplatuo,
-.laplata,
+
+.donacioninput,
 .desticomunas {
     font-size: 20px;
     text-align: justify;
@@ -45,4 +44,11 @@
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
     font-size:15px;
+}
+@media (max-width: 768px) {
+    .contenedordonaciones,
+    .cajadedonaciones{
+        flex-direction: column;
+        height: 100vh;
+    }
 }

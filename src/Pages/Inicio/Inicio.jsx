@@ -8,8 +8,8 @@ function Inicio() {
   return (
     <>
       <Home />
-      <SectionCards header="Nuestras Historias" />
       <Mapa/>
+      <SectionCards header="Nuestras Historias" />
       <VenDonaciones/>
     </>
   );
