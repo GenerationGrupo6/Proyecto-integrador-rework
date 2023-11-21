@@ -1,54 +1,67 @@
-.contenedorposicion{
-    align-items: start;
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    background-color: var(--color-secundario-B);
+.contenedorposicion {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  background-color: var(--color-secundario-B);
+  height: 90vh;
+  flex-direction: row;
+  margin-top: 7rem;
 }
 .contenedordonaciones {
-    display: flex;
-    padding: 5rem;
-    width: 50vw;
-    height: 100%;
-    background-color:var(--color-primario);
-    border-start-start-radius:  10px ;
-    border-bottom-left-radius: 10px;
+  display: flex;
+  width: 85%;
+  height: 100%;
+  background-color: var(--color-primario);
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
-.cajadedonaciones{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    width:30vw;
-    
+
+.div-fotoDonacion {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.cajadedonaciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 30vw;
 }
 
 .montodonacion,
 .destinodonacion {
-    font-size: 20px;
-    text-align: justify;
-    
+  font-size: 20px;
+  text-align: justify;
 }
 
 .donacioninput,
 .desticomunas {
-    font-size: 20px;
-    text-align: justify;
-    border-radius: 10px;
-    background-color:var(--color-secundario);
-    font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  text-align: justify;
+  border-radius: 10px;
+  background-color: var(--color-secundario);
+  font-family: "Poppins", sans-serif;
 }
-.guardardonacion{
-    background-color: var(--color-secundario-B);
-    height: 3rem;
-    width: 10rem;
-    border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-size:15px;
+.guardardonacion {
+  background-color: var(--color-secundario-B);
+  height: 3rem;
+  width: 10rem;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }
 @media (max-width: 768px) {
-    .contenedordonaciones,
-    .cajadedonaciones{
-        flex-direction: column;
-        height: 100vh;
-    }
+  .contenedordonaciones,
+  .cajadedonaciones {
+    flex-direction: column;
+    height: 100vh;
+  }
 }

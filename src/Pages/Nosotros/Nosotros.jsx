@@ -12,7 +12,6 @@ import { WhyUs } from "../../Component/WhyUs/WhyUs";
 import { VolunteerForm } from "../../Component/VolunteerForm/VolunteerForm";
 import { InformationCloud } from "../../Component/InformationCloud/InformationCloud";
 
-
 function Nosotros() {
   return (
     <main className="Father-Container-About-Us-Page">
@@ -108,15 +107,17 @@ function Nosotros() {
           </p>
         </article>
         <article className="Form-Article-Be-Volunteer-Section-About-Us-Page">
-          <h1 className="H1-Volunteer-Form-About-Us-Page">
-            Formulario Solicitud Voluntariado
-          </h1>
-          <h6
-            className="H6-Volunteer-Form-About-Us-Page"
-            style={{ color: "red" }}
-          >
-            Sólo para Región Metropolitana
-          </h6>
+          <div className="Div-Form-Article-Be-Volunteer-Section-About-Us-Page">
+            <h1 className="H1-Volunteer-Form-About-Us-Page">
+              Formulario Solicitud Voluntariado
+            </h1>
+            <h6
+              className="H6-Volunteer-Form-About-Us-Page"
+              style={{ color: "red" }}
+            >
+              Sólo para Región Metropolitana
+            </h6>
+          </div>
           <VolunteerForm />
         </article>
       </section>
