@@ -1,22 +1,21 @@
 .Donation-Button {
   border-radius: 50px;
-  background-color: #f1a057;
+  background-color: orange;
   cursor: pointer;
   user-select: none;
   color: white;
-  font-size: 1.125rem;
+  font-size: 1rem;
   opacity: 0.9;
   font-family: 'Poppins', sans-serif;
-  font-style: bold;
   border: none;
   box-shadow: 0px 2px 2px 0px black;
-  height: fit-content;
-  margin-top: 2rem;
-  min-height: 3.5rem;
-  min-width: 12rem;
+  height: 2.8rem;
+  width: 9rem;
   
 }
 
 .Donation-Button:hover {
   background-color: orangered;
 }
+
+@media 

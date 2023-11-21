@@ -5,7 +5,7 @@
   height: 3rem;
   user-select: none;
   opacity: 0.8;
-  max-width: 100%;
+  width: auto;
   border: #f1a057;
   background-color: white;
   font-family: Arial;
@@ -18,12 +18,13 @@
 
 .Text-Information-Button {
   margin: 10px;
-  line-height: 1.3rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .Text-one {
-  padding-left: 2vw;
-  padding-right: 2vw;
+  
+ 
 }
