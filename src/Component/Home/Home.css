@@ -2,10 +2,12 @@
   display: flex;
 }
 .Ilustration-Section-Home-Page {
-  background-image: url("../../assets/ImagenFinal.jpg");
+  background-image: url("../../assets/imagenFinal.png");
+  background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  min-width: 100vw;
+  background-size: cover;
+  width: auto;
+  min-width: 100%;
   height: 100vh;
   max-height: 100%;
 }
@@ -17,41 +19,77 @@
 }
 
 .Header-Home-Page {
-  margin-left: 1rem;
-  margin-top: 4rem;
   display: flex;
   flex-direction: column;
-  line-height: 2vh;
   align-items: center;
   justify-content: center;
+  height: 50%;
 }
 
 .Together-Home-Page {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 30%;
+  flex-direction: column;
+  align-items: center;
 }
 
-.We-Feed-The-Change {
+.Donate-Home-Page {
   text-align: center;
-  font-size: max(2vw, 1.2rem);
-  color: #432744;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 0rem;
+  width: 100%;
+  margin-top: 1rem;
 }
 
-.Space {
-  margin-right: 1rem;
+.H1-Donate-Home-Page {
+  font-family: Poppins;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-.Second-Container-Donation-Steps-Home-Page {
-  margin-bottom: 20rem;
+.Infortation-Cloud-Section-Home-Page {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  align-items: center;
+  flex-direction: row;
+}
+
+.Div-Infortation-Cloud-Section-Home-Page {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.H1-Infortation-Cloud-Section-Home-Page {
+  font-size: 1rem;
+}
+
+.H1-2-Infortation-Cloud-Section-Home-Page {
+  font-size: 2rem;
+}
+
+.Div2-Infortation-Cloud-Section-Home-Page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
 }
 
 .Donation-Steps-Section1-Home-Page {
   display: flex;
-  flex-direction: column;
-  height: 50vh;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  padding: 3rem;
+  border-radius: 0 0 2rem 2rem;
+  background-color: #3dacc4;
 }
 
 .Donation-Steps-Article-Home-Page {
@@ -62,8 +100,8 @@
 .Donation-Steps-Header-Home-Page {
   display: flex;
   flex-direction: row;
-  line-height: 1.5vh;
-  flex-wrap: wrap;
+  width: 100%;
+  max-height: 100%;
 }
 
 .Donation-Steps-P-Home-Page {
@@ -72,6 +110,9 @@
   width: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-style: italic;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .Donation-Steps-H1-Home-Page {
@@ -84,13 +125,17 @@
 .Donation-Steps-Figure-Money-Donation-Home-Page {
   width: 100%;
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 
 .Figure-Money-Donation {
-  width: 40vw;
+  width: 30vw;
+  height: auto;
 }
 
+.Third-Container-Donation-Steps-Home-Page {
+  display: flex;
+}
 .part2Config {
   display: flex;
   flex-direction: column;
@@ -98,23 +143,6 @@
   height: 100vh;
 }
 
-/* 3 puntos de informacion */
-
-@media (max-width: 480px) {
-  .Money-Image {
-    width: 100vw;
-  }
-  .figure-money {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .Second-Container-Donation-Steps-Home-Page {
-    margin-bottom: 1rem;
-  }
-}
-
-/* home */
 .Third-Container-Donation-Steps-Home-Page {
   display: flex;
   flex-wrap: wrap;
@@ -124,12 +152,11 @@
 }
 
 .Third-Container-Donation-Steps-Home-Page ol {
-  flex-wrap: wrap;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
   width: 80%;
+  flex-wrap: nowrap;
 }
 
 .Third-Container-Donation-Steps-Home-Page ol li {
@@ -143,13 +170,82 @@ li::marker {
   font-size: 3rem;
 }
 
+.Div-Voluntariado {
+  display: flex;
+  height: 17rem;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 1480px) {
   .Third-Container-Donation-Steps-Home-Page {
     margin-left: 0rem;
   }
 }
-@media (max-width: 800px) {
-  .Third-Container-Donation-Steps-Home-Page ol {
+
+@media (max-width: 768px) {
+  .Infortation-Cloud-Section-Home-Page {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+  }
+
+  .Ilustration-Section-Home-Page {
+    background-image: url("../../assets/imagenFinal.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    min-width: 100%;
+    height: 70vh;
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Money-Image {
+    width: 100vw;
+  }
+  .figure-money {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .Second-Container-Donation-Steps-Home-Page {
+    margin-bottom: 1rem;
+  }
+
+  .Together-Home-Page {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+  }
+  .Third-Container-Donation-Steps-Home-Page ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .Third-Container-Donation-Steps-Home-Page ol li {
+    width: 50%;
+  }
+
+  .Infortation-Cloud-Section-Home-Page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
   }
 }

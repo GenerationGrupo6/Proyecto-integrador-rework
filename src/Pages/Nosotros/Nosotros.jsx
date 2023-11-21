@@ -10,6 +10,8 @@ import NosotrosMoira from "../../assets/NosotrosMoira.png";
 import TeamWork from "../../assets/TeamWork.jpg";
 import { WhyUs } from "../../Component/WhyUs/WhyUs";
 import { VolunteerForm } from "../../Component/VolunteerForm/VolunteerForm";
+import { InformationCloud } from "../../Component/InformationCloud/InformationCloud";
+
 
 function Nosotros() {
   return (
@@ -64,6 +66,9 @@ function Nosotros() {
           title="Compromiso con el Cambio Social Sostenible"
           reason="En Canastas de Vida, no solo proporcionamos ayuda inmediata; también nos comprometemos con el cambio social sostenible. Apoyamos proyectos a largo plazo que fortalecen a las comunidades, fomentan el desarrollo y construyen un futuro más equitativo."
         />
+        <div className="Information-Cloud">
+          <InformationCloud />
+        </div>
       </section>
       <section className="Fourth-Section-About-Us-Page">
         <article className="Article-Fourth-Section-About-Us-Page">
