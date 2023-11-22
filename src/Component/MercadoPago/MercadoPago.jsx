@@ -29,8 +29,11 @@ const createPreference = async () => {
             setPreferenceId(id);
         }
     };
+
+    const handleClick = () => {
+        guardarDonacion();
+        handleBuy();
+      };
 };
-    onClick={handleBuy}
-    {preferenceId &&<Wallet initialization={{ preferenceId }} />}
 
 export { Product };

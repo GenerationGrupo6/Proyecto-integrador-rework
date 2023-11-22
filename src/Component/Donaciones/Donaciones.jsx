@@ -1,17 +1,56 @@
-import './Donaciones.css'
 import { useState } from 'react';
-import FDonacion from '../../assets/entrega-de-alimento.png'
+import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';
+import axios from "axios";
 
+import FDonacion from '../../assets/entrega-de-alimento.png'
+import './Donaciones.css'
 
 
 const Donaciones = () => {
-    const [montoDonacion, setMontoDonacion] = useState(3000);
+    const [preferenceId, setPreferenceId] = useState(null);
+    const [montoDonacion, setMontoDonacion] = useState('3000');
     const [destinoDonacion, setDestinoDonacion] = useState('');
-    
-    const guardarDonacion = async (e) =>  {
-      e.preventDefault()
+
+    initMercadoPago('TEST-12840695-a4b5-40ba-ab4f-bb1a4fe1c5e7');
+
+    const createPreference = async () => {
       try {
-        await fetch('http://localhost:3000/api/donaciones', {
+          const response = await axios.post("http://localhost:8080/create_preference", {
+              description: "Nueva donación",
+              price: montoDonacion.monto,
+              quantity: 1,
+              // destiny: nuevaDonacion.destino,
+              // currency_id: "CLP"
+          });
+  
+          const { id } = response.data;
+          return id;
+          }catch (error) {
+              console.log(error);
+          }
+      };
+  
+      const handleBuy = async () => {
+          const id = await createPreference();
+          if (id) {
+              setPreferenceId(id);
+          }
+      };
+  
+      const handleClick = async (e) => {
+          e.preventDefault();
+
+          try {
+          await guardarDonacion();
+          handleBuy();
+          } catch (error) {
+            console.error('Error handling click;', error);
+          }
+        };
+    
+    const guardarDonacion = async () =>  {
+      try {
+        await fetch('http://localhost:8080/api/v1/donaciones', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -76,7 +115,8 @@ const Donaciones = () => {
                 </option>
                 ))}
             </select><br />
-            <button type="button" className="guardardonacion" onClick={guardarDonacion} >Realizar Donación</button>
+            <button type="button" className="guardardonacion" onClick={handleClick} >Realizar Donación</button>
+            {preferenceId &&<Wallet initialization={{ preferenceId }} />}
             </form>
          </div>
         </div>

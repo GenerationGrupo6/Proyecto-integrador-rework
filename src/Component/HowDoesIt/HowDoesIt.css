@@ -5,6 +5,7 @@
     max-width: 1200px;
     margin: auto;
     padding: 5rem 2rem;
+    margin-top: 2.225rem;
 }
 
 .container-how-to {
@@ -20,7 +21,7 @@
 header {
     position: relative;
     padding-top: 2rem;
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
@@ -29,7 +30,8 @@ header {
 main {
     position: relative;
     padding-top: 2rem;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem; 
@@ -101,3 +103,64 @@ p {
     cursor: pointer;
     transition: background-color 0.3s;
  }
+
+ @media screen and (max-width: 60rem) {
+    .content{
+        margin: 0;
+    }
+    .container-how-to{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 56rem) {
+    .content{
+        max-width: 90%;
+        flex-direction: column;
+        margin-inline: 0;
+    }
+  
+    .container-how-to{
+        inset: 0;
+        transform: translate(0, 0);
+        padding: 1rem 1.6rem;
+        text-align: center;
+        /* display: flex; */
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .imagen-how{
+        width: 100%;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+    }
+};
+
+
+@media screen and (max-width:36rem) {
+    .content{
+        max-width: 100%;
+        display: flex;
+        /* flex-direction: column-reverse; */
+    }
+
+    /* .img .FoodBank{
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    } */
+    .container-how-to{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
+}

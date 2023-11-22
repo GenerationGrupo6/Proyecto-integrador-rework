@@ -7,7 +7,7 @@
     width: 100%;
     display: flex;
     margin-inline: 1rem;
-
+    margin-top: 2.125rem;
 }
 
 .gradient-section{
@@ -20,7 +20,6 @@
     height: 100%;
     background-color: #fff;
     background-image: url('../../assets/contacto.jpg');
-
 }
 
 .gradient-container {
@@ -86,7 +85,7 @@
 
 .send-btn {
   color: #fff;
-  background-color: #f1a057;
+  background-color: orange;
   opacity: 0.9;
   padding: 6px 20px; 
   border: none;
@@ -96,7 +95,7 @@
   user-select: none;
   font-family: 'Poppins', sans-serif;
   height: fit-content;
-  box-shadow: 0px 2px 2px 0px #c4c4c4;
+  box-shadow: 0px 2px 2px 0px #ccc;
 }
 
 .send-btn:hover {
