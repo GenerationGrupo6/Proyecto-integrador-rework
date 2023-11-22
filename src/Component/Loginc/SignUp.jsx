@@ -1,14 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./LoginComponent.css";
 import user_icon from "../../assets/person.png";
 import email_icon from "../../assets/email.png";
 import password_icon from "../../assets/password.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/Logo-sin-fondo.png";
-
+import { useForm } from "react-hook-form";
+import { useAuth } from "../../context/AuthContext";
 function SignUp() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const { signup, isAuthenticated, errors: registerErrors } = useAuth();
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated) navigate("/profile");
+  }, [isAuthenticated]);
+
+  const onSubmit = handleSubmit(async (values) => {
+    signup(values);
+  });
+
   return (
     <>
+      {/* {registerErrors.map((error, i) => (
+        <div key={i}>{error}</div>
+      ))} */}
       <div className="container-login-all">
         <section className="login-container-left">
           <Link to="/">
@@ -30,35 +51,72 @@ function SignUp() {
               </Link>
             </p>
           </header>
-          <div className="login-Datos-right">Datos de tu Cuenta</div>
 
-          <div className="inputs">
-            <div className="input input-nombre">
-              <img src={user_icon} alt="Ingrese Nombre" />
-              <input type="text" placeholder="Nombre" />
-            </div>
-            <div className="input input-apellido">
-              <img src={user_icon} alt="Apellidos" />
-              <input type="text" placeholder="Apellidos" />
-            </div>
+          {/* formulario de registro de usuario */}
+          <form onSubmit={onSubmit}>
+            <div className="login-Datos-right">Datos de tu Cuenta</div>
 
-            <div className="input">
-              <img src={email_icon} alt="Ingrese Correo" />
-              <input type="email" placeholder="Direccion de Email" />
-            </div>
-            <div className="input">
-              <img src={email_icon} alt="Ingrese Correo nuevamente" />
-              <input type="email" placeholder="Confirma tu Email" />
-            </div>
+            <div className="inputs">
+              <div className="input input-nombre">
+                <img src={user_icon} alt="Ingrese Nombre" />
+                {/* input de nombre */}
+                <input
+                  type="text"
+                  placeholder="Nombre"
+                  name="username"
+                  autoComplete="given-name"
+                  {...register("username", { required: true })}
+                />
+                {errors.username && (
+                  <p className="errores">Username is required</p>
+                )}
+              </div>
+              <div className="input input-apellido">
+                <img src={user_icon} alt="Apellidos" />
+                {/* input de apellido */}
 
-            <div className="input">
-              <img src={password_icon} alt="Ingrese contraseña" />
-              <input type="password" placeholder="Contraseña" />
+                <input
+                  type="text"
+                  placeholder="Apellidos"
+                  autoComplete="given-lastname"
+                />
+              </div>
+
+              <div className="input">
+                <img src={email_icon} alt="Ingrese Correo" />
+                {/* input de correo */}
+
+                <input
+                  type="email"
+                  placeholder="Direccion de Email"
+                  name="email"
+                  autoComplete="given-email"
+                  {...register("email", { required: true })}
+                />
+                {errors.email && <p className="errores">Email is required</p>}
+              </div>
+              <div className="input">
+                <img src={password_icon} alt="Ingrese contraseña" />
+                {/* input de contraseña */}
+
+                <input
+                  type="password"
+                  placeholder="Contraseña"
+                  name="password"
+                  autoComplete="given-password"
+                  {...register("password", { required: true })}
+                />
+                {errors.password && (
+                  <p className="errores">Password is required</p>
+                )}
+              </div>
             </div>
-          </div>
-          <div className="submit-container">
-            <button className="registrarse-login-button">Registrarse</button>
-          </div>
+            <div className="submit-container">
+              <button className="registrarse-login-button" type="submit">
+                Registrarse
+              </button>
+            </div>
+          </form>
         </section>
       </div>
     </>

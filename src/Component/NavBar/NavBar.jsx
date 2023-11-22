@@ -7,10 +7,9 @@ export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   if (location.pathname === "/Login") return null;
-  if (location.pathname === "/Registro") return null;
+  if (location.pathname === "/register") return null;
 
   window.addEventListener("scroll", () => {
-
     const scrollCheck = document.querySelector(".NavConfig");
     if (!scrollCheck) return;
     if (window.scrollY > 0) {
