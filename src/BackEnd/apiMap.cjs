@@ -1,10 +1,22 @@
 // eslint-disable-next-line no-undef
 const express = require('express');
+// eslint-disable-next-line no-undef
+const cors = require('cors');
 const app = express();
 // eslint-disable-next-line no-undef
 const  port = process.env.PORT ?? 3001; 
 
 let comunas = [
+    {
+        "comuna": "Region_Metropolitana",
+        "habitantes": '7.112.808',
+        "municipalidad": "",
+        "municipalidadcorto":"",
+        "donaciones": ["selecciona una comuna",
+        "selecciona una comuna"
+    ]
+
+    },
     {
         "comuna": "Padre_Hurtado",
         "habitantes": '63.250',
@@ -381,13 +393,13 @@ let comunas = [
 ]
 
 
-
+app.use(cors());
 app.get('/', (req, res) =>{
     res.json({comunas});
 })
 
 app.get('/:comuna', (req, res) =>{
-    const Ncomuna = req.params.id;
+    const Ncomuna = req.params.comuna;
     const comuna = comunas.find(comuna => comuna.comuna === Ncomuna);
     if (comuna){
         res.json(comuna);

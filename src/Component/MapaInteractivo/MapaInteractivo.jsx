@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 const MapaInteractivo = () => {
   const [comuna, setComuna] = useState("HAGA CLICK EN UNA COMUNA!!");
   const [target, setTarget] = useState(null);
+  const [contenido, setContenido] = useState({});
+  const [iden, setIden] = useState("Region_Metropolitana");
   const clickTarget = (id) => {
     setTarget(id);
   };
@@ -19,7 +21,16 @@ const MapaInteractivo = () => {
       pathActual.style.fill = "var(--color-active)";
     }
   }, [target]);
+  useEffect(() => {
+    fetch(`http://localhost:3001/${iden}`)
+      .then((res) => res.json())
+      .then((data) => setContenido(data));
+  });
+
   const comunaActual = comuna;
+  const habitantes = contenido.habitantes;
+  const municipalidad = contenido.municipalidad;
+  const donaciones = contenido.donaciones || ["seleccione una comuna"];
   return (
     <div className="ContenedorGeneral">
       <svg
@@ -36,7 +47,9 @@ const MapaInteractivo = () => {
           id="Padre_Hurtado"
           className="comuna"
           onClick={() => {
-            setComuna("Padre Hurtado"), clickTarget("Padre_Hurtado");
+            setComuna("Padre Hurtado"),
+              clickTarget("Padre_Hurtado"),
+              setIden("Padre_Hurtado");
           }}
         />
         <path
@@ -44,7 +57,7 @@ const MapaInteractivo = () => {
           id="Maipú"
           className="comuna"
           onClick={() => {
-            setComuna("Maipú"), clickTarget("Maipú");
+            setComuna("Maipú"), clickTarget("Maipú"), setIden("Maipú");
           }}
         />
         <path
@@ -52,7 +65,9 @@ const MapaInteractivo = () => {
           id="Cerrillos"
           className="comuna"
           onClick={() => {
-            setComuna("Cerrillos"), clickTarget("Cerrillos");
+            setComuna("Cerrillos"),
+              clickTarget("Cerrillos"),
+              setIden("Cerrillos");
           }}
         />
         <path
@@ -60,7 +75,9 @@ const MapaInteractivo = () => {
           id="Estación_Central"
           className="comuna"
           onClick={() => {
-            setComuna("Estación Central"), clickTarget("Estación_Central");
+            setComuna("Estación Central"),
+              clickTarget("Estación_Central"),
+              setIden("Estación_Central");
           }}
         />
         <path
@@ -68,7 +85,7 @@ const MapaInteractivo = () => {
           id="Pudahuel"
           className="comuna"
           onClick={() => {
-            setComuna("Pudahuel"), clickTarget("Pudahuel");
+            setComuna("Pudahuel"), clickTarget("Pudahuel"), setIden("Pudahuel");
           }}
         />
         <path
@@ -76,7 +93,7 @@ const MapaInteractivo = () => {
           id="Lo_Prado"
           className="comuna"
           onClick={() => {
-            setComuna("Lo Prado"), clickTarget("Lo_Prado");
+            setComuna("Lo Prado"), clickTarget("Lo_Prado"), setIden("Lo_Prado");
           }}
         />
         <path
@@ -84,7 +101,9 @@ const MapaInteractivo = () => {
           id="Cerro_Navia"
           className="comuna"
           onClick={() => {
-            setComuna("Cerro Navia"), clickTarget("Cerro_Navia");
+            setComuna("Cerro Navia"),
+              clickTarget("Cerro_Navia"),
+              setIden("Cerro_Navia");
           }}
         />
         <path
@@ -92,7 +111,7 @@ const MapaInteractivo = () => {
           id="Santiago"
           className="comuna"
           onClick={() => {
-            setComuna("Santiago"), clickTarget("Santiago");
+            setComuna("Santiago"), clickTarget("Santiago"), setIden("Santiago");
           }}
         />
         <path
@@ -100,7 +119,7 @@ const MapaInteractivo = () => {
           id="Renca"
           className="comuna"
           onClick={() => {
-            setComuna("Renca"), clickTarget("Renca");
+            setComuna("Renca"), clickTarget("Renca"), setIden("Renca");
           }}
         />
         <path
@@ -108,7 +127,9 @@ const MapaInteractivo = () => {
           id="Quinta_Normal"
           className="comuna"
           onClick={() => {
-            setComuna("Quinta Normal"), clickTarget("Quinta_Normal");
+            setComuna("Quinta Normal"),
+              clickTarget("Quinta_Normal"),
+              setIden("Quinta_Normal");
           }}
         />
         <path
@@ -116,7 +137,7 @@ const MapaInteractivo = () => {
           id="Recoleta"
           className="comuna"
           onClick={() => {
-            setComuna("Recoleta"), clickTarget("Recoleta");
+            setComuna("Recoleta"), clickTarget("Recoleta"), setIden("Recoleta");
           }}
         />
         <path
@@ -124,7 +145,9 @@ const MapaInteractivo = () => {
           id="Independencia"
           className="comuna"
           onClick={() => {
-            setComuna("Independencia"), clickTarget("Independencia");
+            setComuna("Independencia"),
+              clickTarget("Independencia"),
+              setIden("Independencia");
           }}
         />
         <path
@@ -132,7 +155,9 @@ const MapaInteractivo = () => {
           id="Quilicura"
           className="comuna"
           onClick={() => {
-            setComuna("Quilicura"), clickTarget("Quilicura");
+            setComuna("Quilicura"),
+              clickTarget("Quilicura"),
+              setIden("Quilicura");
           }}
         />
         <path
@@ -140,7 +165,7 @@ const MapaInteractivo = () => {
           id="Conchalí"
           className="comuna"
           onClick={() => {
-            setComuna("Conchalí"), clickTarget("Conchalí");
+            setComuna("Conchalí"), clickTarget("Conchalí"), setIden("Conchalí");
           }}
         />
         <path
@@ -148,7 +173,9 @@ const MapaInteractivo = () => {
           id="San_Bernardo"
           className="comuna"
           onClick={() => {
-            setComuna("San Bernardo"), clickTarget("San_Bernardo");
+            setComuna("San Bernardo"),
+              clickTarget("San_Bernardo"),
+              setIden("San_Bernardo");
           }}
         />
         <path
@@ -156,7 +183,9 @@ const MapaInteractivo = () => {
           id="El_Bosque"
           className="comuna"
           onClick={() => {
-            setComuna("El Bosque"), clickTarget("El_Bosque");
+            setComuna("El Bosque"),
+              clickTarget("El_Bosque"),
+              setIden("El_Bosque");
           }}
         />
         <path
@@ -164,7 +193,9 @@ const MapaInteractivo = () => {
           id="La_Cisterna"
           className="comuna"
           onClick={() => {
-            setComuna("La Cisterna"), clickTarget("La_Cisterna");
+            setComuna("La Cisterna"),
+              clickTarget("La_Cisterna"),
+              setIden("La_Cisterna");
           }}
         />
         <path
@@ -172,7 +203,9 @@ const MapaInteractivo = () => {
           id="Lo_Espejo"
           className="comuna"
           onClick={() => {
-            setComuna("Lo Espejo"), clickTarget("Lo_Espejo");
+            setComuna("Lo Espejo"),
+              clickTarget("Lo_Espejo"),
+              setIden("Lo_Espejo");
           }}
         />
         <path
@@ -181,7 +214,8 @@ const MapaInteractivo = () => {
           className="comuna"
           onClick={() => {
             setComuna("Pedro Aguirre Cerda"),
-              clickTarget("Pedro_Aguirre_Cerda");
+              clickTarget("Pedro_Aguirre_Cerda"),
+              setIden("Pedro_Aguirre_Cerda");
           }}
         />
         <path
@@ -189,7 +223,9 @@ const MapaInteractivo = () => {
           id="San_Miguel"
           className="comuna"
           onClick={() => {
-            setComuna("San Miguel"), clickTarget("San_Miguel");
+            setComuna("San Miguel"),
+              clickTarget("San_Miguel"),
+              setIden("San_Miguel");
           }}
         />
         <path
@@ -197,7 +233,9 @@ const MapaInteractivo = () => {
           id="San_Ramón"
           className="comuna"
           onClick={() => {
-            setComuna("San Ramón"), clickTarget("San_Ramón");
+            setComuna("San Ramón"),
+              clickTarget("San_Ramón"),
+              setIden("San_Ramón");
           }}
         />
         <path
@@ -205,7 +243,9 @@ const MapaInteractivo = () => {
           id="La_Granja"
           className="comuna"
           onClick={() => {
-            setComuna("La Granja"), clickTarget("La_Granja");
+            setComuna("La Granja"),
+              clickTarget("La_Granja"),
+              setIden("La_Granja");
           }}
         />
         <path
@@ -213,7 +253,9 @@ const MapaInteractivo = () => {
           id="San_Joaquín"
           className="comuna"
           onClick={() => {
-            setComuna("San Joaquín"), clickTarget("San_Joaquín");
+            setComuna("San Joaquín"),
+              clickTarget("San_Joaquín"),
+              setIden("San_Joaquín");
           }}
         />
         <path
@@ -221,7 +263,9 @@ const MapaInteractivo = () => {
           id="La_Pintana"
           className="comuna"
           onClick={() => {
-            setComuna("La Pintana"), clickTarget("La_Pintana");
+            setComuna("La Pintana"),
+              clickTarget("La_Pintana"),
+              setIden("La_Pintana");
           }}
         />
         <path
@@ -229,7 +273,9 @@ const MapaInteractivo = () => {
           id="Providencia"
           className="comuna"
           onClick={() => {
-            setComuna("Providencia"), clickTarget("Providencia");
+            setComuna("Providencia"),
+              clickTarget("Providencia"),
+              setIden("Providencia");
           }}
         />
         <path
@@ -237,7 +283,7 @@ const MapaInteractivo = () => {
           id="Ñuñoa"
           className="comuna"
           onClick={() => {
-            setComuna("Ñuñoa"), clickTarget("Ñuñoa");
+            setComuna("Ñuñoa"), clickTarget("Ñuñoa"), setIden("Ñuñoa");
           }}
         />
         <path
@@ -245,7 +291,7 @@ const MapaInteractivo = () => {
           id="La_Reina"
           className="comuna"
           onClick={() => {
-            setComuna("La Reina"), clickTarget("La_Reina");
+            setComuna("La Reina"), clickTarget("La_Reina"), setIden("La_Reina");
           }}
         />
         <path
@@ -253,7 +299,7 @@ const MapaInteractivo = () => {
           id="Macul"
           className="comuna"
           onClick={() => {
-            setComuna("Macul"), clickTarget("Macul");
+            setComuna("Macul"), clickTarget("Macul"), setIden("Macul");
           }}
         />
         <path
@@ -261,7 +307,9 @@ const MapaInteractivo = () => {
           id="Puente_Alto"
           className="comuna"
           onClick={() => {
-            setComuna("Puente Alto"), clickTarget("Puente_Alto");
+            setComuna("Puente Alto"),
+              clickTarget("Puente_Alto"),
+              setIden("Puente_Alto");
           }}
         />
         <path
@@ -269,7 +317,7 @@ const MapaInteractivo = () => {
           id="Pirque"
           className="comuna"
           onClick={() => {
-            setComuna("Pirque"), clickTarget("Pirque");
+            setComuna("Pirque"), clickTarget("Pirque"), setIden("Pirque");
           }}
         />
         <path
@@ -277,7 +325,9 @@ const MapaInteractivo = () => {
           id="San_José_de_Maipo"
           className="comuna"
           onClick={() => {
-            setComuna("San José de Maipo"), clickTarget("San_José_de_Maipo");
+            setComuna("San José de Maipo"),
+              clickTarget("San_José_de_Maipo"),
+              setIden("San_José_de_Maipo");
           }}
         />
         <path
@@ -285,7 +335,9 @@ const MapaInteractivo = () => {
           id="La_Florida"
           className="comuna"
           onClick={() => {
-            setComuna("La Florida"), clickTarget("La_Florida");
+            setComuna("La Florida"),
+              clickTarget("La_Florida"),
+              setIden("La_Florida");
           }}
         />
         <path
@@ -293,7 +345,9 @@ const MapaInteractivo = () => {
           id="Peñalolén"
           className="comuna"
           onClick={() => {
-            setComuna("Peñalolén"), clickTarget("Peñalolén");
+            setComuna("Peñalolén"),
+              clickTarget("Peñalolén"),
+              setIden("Peñalolén");
           }}
         />
         <path
@@ -301,7 +355,9 @@ const MapaInteractivo = () => {
           id="Las_Condes"
           className="comuna"
           onClick={() => {
-            setComuna("Las Condes"), clickTarget("Las_Condes");
+            setComuna("Las Condes"),
+              clickTarget("Las_Condes"),
+              setIden("Las_Condes");
           }}
         />
         <path
@@ -309,7 +365,7 @@ const MapaInteractivo = () => {
           id="Vitacura"
           className="comuna"
           onClick={() => {
-            setComuna("Vitacura"), clickTarget("Vitacura");
+            setComuna("Vitacura"), clickTarget("Vitacura"), setIden("Vitacura");
           }}
         />
         <path
@@ -317,7 +373,9 @@ const MapaInteractivo = () => {
           id="Lo_Barnechea"
           className="comuna"
           onClick={() => {
-            setComuna("Lo Barnechea"), clickTarget("Lo_Barnechea");
+            setComuna("Lo Barnechea"),
+              clickTarget("Lo_Barnechea"),
+              setIden("Lo_Barnechea");
           }}
         />
         <path
@@ -325,7 +383,9 @@ const MapaInteractivo = () => {
           id="Huechuraba"
           className="comuna"
           onClick={() => {
-            setComuna("Huechuraba"), clickTarget("Huechuraba");
+            setComuna("Huechuraba"),
+              clickTarget("Huechuraba"),
+              setIden("Huechuraba");
           }}
         />
       </svg>
@@ -334,11 +394,18 @@ const MapaInteractivo = () => {
           <h2>{comunaActual}</h2>
         </div>
         <div className="contenido">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Perspiciatis atque quaerat doloremque obcaecati facilis inventore
-            ipsam praesentium sapiente architecto nam?
-          </p>
+          <h3 className="tituloContenido">{`Habitantes: `}</h3>
+          <h4 className="contenidoApi">{habitantes} Personas</h4>
+          <h3 className="tituloContenido">{`Web Municipalidad: `}</h3>
+          <h4 className="contenidoApi">
+            <a href={municipalidad}>{municipalidad}</a>
+          </h4>
+          <h3 className="tituloContenido">{`Instituciones: `}</h3>
+          <ul className="contenidoApiLista">
+            {donaciones.map((donacion, index) => (
+              <li className="lista" key={index}>{donacion}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
