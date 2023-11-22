@@ -52,7 +52,7 @@
   justify-content: space-evenly;
   height: 100%;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .Div-Infortation-Cloud-Section-Home-Page {
@@ -69,6 +69,7 @@
 
 .H1-2-Infortation-Cloud-Section-Home-Page {
   font-size: 2rem;
+  margin: 0;
 }
 
 .Div2-Infortation-Cloud-Section-Home-Page {
@@ -149,6 +150,8 @@
   flex-direction: row;
   width: 100%;
   justify-content: center;
+  height: 50vh;
+  align-items: center;
 }
 
 .Third-Container-Donation-Steps-Home-Page ol {
@@ -172,7 +175,7 @@ li::marker {
 
 .Div-Voluntariado {
   display: flex;
-  height: 17rem;
+  height: 20rem;
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
@@ -187,7 +190,7 @@ li::marker {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .Infortation-Cloud-Section-Home-Page {
     width: 100%;
     display: flex;
@@ -207,9 +210,35 @@ li::marker {
     height: 70vh;
     max-height: 100%;
   }
+
+  .H1-Donate-Home-Page {
+    font-family: Poppins;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .Third-Container-Donation-Steps-Home-Page ol {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .Div-Voluntariado {
+    display: flex;
+    height: 15rem;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
   .Money-Image {
     width: 100vw;
   }
@@ -226,8 +255,20 @@ li::marker {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 1rem;
+    width: 10rem;
   }
+
+  .Third-Container-Donation-Steps-Home-Page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+  }
+
   .Third-Container-Donation-Steps-Home-Page ol {
     display: flex;
     flex-direction: column;
@@ -248,4 +289,24 @@ li::marker {
     height: 100%;
     align-items: center;
   }
+
+  .H1-Donate-Home-Page {
+    font-family: Poppins;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .Div-Voluntariado {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
 }

@@ -62,24 +62,52 @@ const Donaciones = () => {
     
   
     return (
-     <div className="contenedorposicion" >
-        <img id='fotoDonacion' src={FDonacion}/>
-        <div className="contenedordonaciones">
-            <form className="cajadedonaciones">
-            <label className="montodonacion" htmlFor="montoDonacion">Monto de la Donación:</label>
-            <input className="donacioninput" type="number" id="montoDonacion" value={montoDonacion} onChange={(e) => setMontoDonacion(e.target.value)} min="3000" step="1000" required /><br />
-            <label className="destinodonacion" htmlFor="destinoDonacion">Destino de la Donación:</label>
-            <select className="desticomunas" id="destinoDonacion" value={destinoDonacion} onChange={(e) => setDestinoDonacion(e.target.value)}>
-                {destino.map((destino, index) => (
-                <option key={index} value={destino}>
-                    {destino}
-                </option>
-                ))}
-            </select><br />
-            <button type="button" className="guardardonacion" onClick={guardarDonacion} >Realizar Donación</button>
-            </form>
-         </div>
+      <div className="contenedorposicion">
+        <div className='div-fotoDonacion'>
+          <img id="fotoDonacion" src={FDonacion} />
         </div>
+        <div className="contenedordonaciones">
+          <form className="cajadedonaciones">
+            <label className="montodonacion" htmlFor="montoDonacion">
+              Monto de la Donación:
+            </label>
+            <input
+              className="donacioninput"
+              type="number"
+              id="montoDonacion"
+              value={montoDonacion}
+              onChange={(e) => setMontoDonacion(e.target.value)}
+              min="3000"
+              step="1000"
+              required
+            />
+            <br />
+            <label className="destinodonacion" htmlFor="destinoDonacion">
+              Destino de la Donación:
+            </label>
+            <select
+              className="desticomunas"
+              id="destinoDonacion"
+              value={destinoDonacion}
+              onChange={(e) => setDestinoDonacion(e.target.value)}
+            >
+              {destino.map((destino, index) => (
+                <option key={index} value={destino}>
+                  {destino}
+                </option>
+              ))}
+            </select>
+            <br />
+            <button
+              type="button"
+              className="guardardonacion"
+              onClick={guardarDonacion}
+            >
+              Realizar Donación
+            </button>
+          </form>
+        </div>
+      </div>
     );
   };
 
