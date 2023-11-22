@@ -45,10 +45,30 @@
     font-family: 'Poppins', sans-serif;
     font-size:15px;
 }
+@media (max-width: 1124px) {
+    .contenedordonaciones,
+    .cajadedonaciones{
+        flex-direction: column;
+        height: 100vh;
+        width: 40%;
+    }
+}
+
 @media (max-width: 768px) {
     .contenedordonaciones,
     .cajadedonaciones{
         flex-direction: column;
         height: 100vh;
+        width: 70%;
+        margin-left: 0;
     }
 }
+@media (max-width: 480px) {
+    .contenedordonaciones,
+    .cajadedonaciones{
+        flex-direction: column;
+      width: 70%;
+      height: 48vh;
+      margin-left: 0;
+    }
+  }
