@@ -1,35 +1,66 @@
-.Container-Arguments-Why-Canastas-De-Vida-About-Us-Page{
-    width: 180vh;
-    height: 50vh;
-    margin:10px 10px 50px;
+.Container-Arguments-Why-Canastas-De-Vida-About-Us-Page {
+  width: 90%;
+  height: 50vh;
+  margin: 10px 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  box-shadow: 0 3px 13px 1px rgb(0 0 0/ 9%);
+}
+
+.Image-Arguments-Why-Canastas-De-Vida-About-Us-Page {
+  height: 100%;
+  width: auto;
+}
+
+.Text-Arguments-Why-Canastas-De-Vida-About-Us-Page {
+  text-align: center;
+  padding: 10vh;
+  font-weight: 2vh;
+  line-height: 1.5rem;
+}
+
+.Title-Arguments-Why-Canastas-De-Vida-About-Us-Page {
+  font-size: 3vh;
+}
+
+.Reason-Arguments-Why-Canastas-De-Vida-About-Us-Page {
+  font-size: 2.5vh;
+  text-align: justify;
+}
+
+/*@media (max-width: 1024px) {
+  .Container-Arguments-Why-Canastas-De-Vida-About-Us-Page {
+  }
+}*/
+
+@media (max-width: 430px) {
+  .Text-Arguments-Why-Canastas-De-Vida-About-Us-Page {
+    text-align: center;
+    padding: 0.4rem;
+    line-height: 1.5rem;
+    width: 100%;
+  }
+
+  .Title-Arguments-Why-Canastas-De-Vida-About-Us-Page {
+    font-size: 0.7rem;
+  }
+
+  .Reason-Arguments-Why-Canastas-De-Vida-About-Us-Page {
+    font-size: 0.4rem;
+    text-align: justify;
+    display: flex;
+    line-height: 0.5rem;
+  }
+  .Container-Arguments-Why-Canastas-De-Vida-About-Us-Page {
+    width: 80%;
+    height: 20vh;
+    margin: 10px 10px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: whitesmoke;
     box-shadow: 0 3px 13px 1px rgb(0 0 0/ 9%);
-}
-
-.Image-Arguments-Why-Canastas-De-Vida-About-Us-Page{
-    height: 100%;
-    width: auto;
-}
-
-.Text-Arguments-Why-Canastas-De-Vida-About-Us-Page{
-    
-    text-align: center;
-    padding: 10vh;
-    font-weight: 2vh;
-    line-height: 1.5rem;
-
-}
-
-.Title-Arguments-Why-Canastas-De-Vida-About-Us-Page{
-    font-size: 3vh;
-
-}
-
-.Reason-Arguments-Why-Canastas-De-Vida-About-Us-Page{
-    font-size: 2.5vh;
-    text-align: justify;
-
+  }
 }

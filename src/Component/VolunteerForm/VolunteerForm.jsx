@@ -1,12 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import "./VolunteerForm.css";
 
 function VolunteerForm() {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
-    
   };
 
   return (
@@ -14,7 +14,7 @@ function VolunteerForm() {
       className="Form-Volunteer-About-Us-Page"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div>
+      <div className="div-entrada">
         <label>Nombre Completo</label>
         <input
           type="text"
@@ -22,15 +22,15 @@ function VolunteerForm() {
           {...register("nombre", { required: true })}
         />
       </div>
-      <div>
+      <div className="div-entrada">
         <label>Rut</label>
         <input
           type="text"
           name="rut"
-          {...register("rut", { required: true })}
+          {...register("rut", { required: true }, { unique: true })}
         />
       </div>
-      <div>
+      <div className="div-entrada">
         <label>Edad</label>
         <input
           type="number"
@@ -38,24 +38,20 @@ function VolunteerForm() {
           {...register("edad", { required: true })}
         />
       </div>
-      <div>
-        <label>Número de Teléfono</label>
+      <div className="div-entrada">
+        <label>Teléfono</label>
         <input type="tel" name="telefono" {...register("telefono")} />
       </div>
-      <div>
+      <div className="div-entrada">
         <label>Ocupación</label>
-        <input type="text" name="ocupacion" {...register("ocupacion")} />
+        <select name="ocupacion" {...register("ocupacion", { required: true })}>
+          <option value="">Seleccione su ocupación</option>
+          <option value="Estudiante">Estudiante</option>
+          <option value="Providencia">Trabajador</option>
+          <option value="LasCondes">Jubilado</option>
+        </select>
       </div>
-      <div>
-        <label>Subir CV</label>
-        <input
-          type="file"
-          name="cv"
-          accept=".pdf,.doc,.docx"
-          {...register("cv")}
-        />
-      </div>
-      <div>
+      <div className="div-entrada">
         <label>Comuna de Residencia</label>
         <select name="comuna" {...register("comuna", { required: true })}>
           <option value="">Seleccione una comuna</option>
@@ -95,14 +91,16 @@ function VolunteerForm() {
           <option value="Colina">Colina</option>
         </select>
       </div>
-      <div>
-        <label>Explique por qué quiere ser voluntario</label>
+      <div className="div-entrada">
+        <label>¿Por qué quieres ser voluntario?</label>
         <textarea
           name="motivacion"
           {...register("motivacion", { required: true })}
         ></textarea>
       </div>
-      <input type="submit" value="Enviar" />
+      <div className="div-submit">
+        <input type="submit" value="Enviar" />
+      </div>
     </form>
   );
 }

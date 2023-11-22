@@ -10,6 +10,7 @@ import NosotrosMoira from "../../assets/NosotrosMoira.png";
 import TeamWork from "../../assets/TeamWork.jpg";
 import { WhyUs } from "../../Component/WhyUs/WhyUs";
 import { VolunteerForm } from "../../Component/VolunteerForm/VolunteerForm";
+import { InformationCloud } from "../../Component/InformationCloud/InformationCloud";
 
 function Nosotros() {
   return (
@@ -44,26 +45,31 @@ function Nosotros() {
             ¿Por Qué Canastas de Vida?
           </h1>
         </article>
-        <WhyUs
-          image={TeamWork}
-          title="Impacto Directo en Comunidades Vulnerables"
-          reason="Cada donación que recibimos se traduce en un impacto directo en las comunidades más vulnerables de Santiago. A través de nuestras iniciativas, llevamos alimentos esenciales a hogares que lo necesitan desesperadamente, construyendo puentes de solidaridad y esperanza."
-        />
-        <WhyUs
-          image={TeamWork}
-          title="Transparencia y Responsabilidad"
-          reason="Valoramos tu confianza y creemos en la transparencia total. Cada donación se gestiona con responsabilidad, y te mantenemos informado sobre cómo tus contribuciones están marcando la diferencia. Nos esforzamos por construir una relación basada en la honestidad y la responsabilidad."
-        />
-        <WhyUs
-          image={TeamWork}
-          title="Historias de Transformación y Esperanza"
-          reason="Detrás de cada canasta hay una historia de transformación y esperanza. Compartimos historias conmovedoras de aquellos cuyas vidas han cambiado gracias a tu generosidad. Cada donación no solo alimenta cuerpos, sino que también nutre almas y construye un tejido de esperanza en nuestra comunidad."
-        />
-        <WhyUs
-          image={TeamWork}
-          title="Compromiso con el Cambio Social Sostenible"
-          reason="En Canastas de Vida, no solo proporcionamos ayuda inmediata; también nos comprometemos con el cambio social sostenible. Apoyamos proyectos a largo plazo que fortalecen a las comunidades, fomentan el desarrollo y construyen un futuro más equitativo."
-        />
+        <div className="Div-Why-Us">
+          <WhyUs
+            image={TeamWork}
+            title="Impacto Directo en Comunidades Vulnerables"
+            reason="Cada donación que recibimos se traduce en un impacto directo en las comunidades más vulnerables de Santiago. A través de nuestras iniciativas, llevamos alimentos esenciales a hogares que lo necesitan desesperadamente, construyendo puentes de solidaridad y esperanza."
+          />
+          <WhyUs
+            image={TeamWork}
+            title="Transparencia y Responsabilidad"
+            reason="Valoramos tu confianza y creemos en la transparencia total. Cada donación se gestiona con responsabilidad, y te mantenemos informado sobre cómo tus contribuciones están marcando la diferencia. Nos esforzamos por construir una relación basada en la honestidad y la responsabilidad."
+          />
+          <WhyUs
+            image={TeamWork}
+            title="Historias de Transformación y Esperanza"
+            reason="Detrás de cada canasta hay una historia de transformación y esperanza. Compartimos historias conmovedoras de aquellos cuyas vidas han cambiado gracias a tu generosidad. Cada donación no solo alimenta cuerpos, sino que también nutre almas y construye un tejido de esperanza en nuestra comunidad."
+          />
+          <WhyUs
+            image={TeamWork}
+            title="Compromiso con el Cambio Social Sostenible"
+            reason="En Canastas de Vida, no solo proporcionamos ayuda inmediata; también nos comprometemos con el cambio social sostenible. Apoyamos proyectos a largo plazo que fortalecen a las comunidades, fomentan el desarrollo y construyen un futuro más equitativo."
+          />
+        </div>
+        <div className="Information-Cloud">
+          <InformationCloud />
+        </div>
       </section>
       <section className="Fourth-Section-About-Us-Page">
         <article className="Article-Fourth-Section-About-Us-Page">
@@ -103,16 +109,17 @@ function Nosotros() {
           </p>
         </article>
         <article className="Form-Article-Be-Volunteer-Section-About-Us-Page">
-          <h1 className="H1-Volunteer-Form-About-Us-Page">
-            Formulario Solicitud Voluntariado
-          </h1>
-          <h6
-            className="H6-Volunteer-Form-About-Us-Page"
-            style={{ color: "red" }}
-          >
-            Sólo para Región Metropolitana
-          </h6>
-          <VolunteerForm />
+          <div className="Div-Form-Article-Be-Volunteer-Section-About-Us-Page">
+            <h1 className="H1-Volunteer-Form-About-Us-Page">
+              Formulario Solicitud Voluntariado
+            </h1>
+            <h6 className="H6-Volunteer-Form-About-Us-Page">
+              Sólo para Región Metropolitana
+            </h6>
+          </div>
+          <div className="Div-VolunteerForm">
+            <VolunteerForm />
+          </div>
         </article>
       </section>
     </main>
