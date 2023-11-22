@@ -6,8 +6,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  line-height: 5vh;
-  margin-top: 8vh;
+  margin-top: 14vh;
 }
 
 .H2-First-Section-About-Us-Page {
@@ -59,7 +58,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 30vh;
+  height: 25vh;
   align-content: center;
   justify-content: center;
   align-items: flex-end;
@@ -93,6 +92,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: 100%;
 }
 
 .H1-Why-Canastas-De-Vida-Section-About-Us-Page {
@@ -101,38 +101,43 @@
 }
 
 .Be-Volunteer-Section-About-Us-Page {
-  height: 100vh;
   display: flex;
-  flex-direction: row;
   width: 100%;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  height: 100vh;
 }
 
 .Article-Be-Volunteer-Section-About-Us-Page {
   display: flex;
-  flex-direction: column;
   width: 50%;
-  margin: 2%;
-  padding: 2%;
+  margin: 1rem;
+  padding: 2rem;
   justify-content: center;
   text-align: center;
-  width: 100%;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .Form-Article-Be-Volunteer-Section-About-Us-Page {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin: 2%;
-  padding: 3%;
+  width: 50%;
+  margin: 1rem;
+  padding-left: 2rem;
   background-color: #fafafa;
   border-radius: 14%;
   box-shadow: 0px 6px 13px 1px rgb(0 0 0/ 9%);
   justify-content: center;
   align-content: center;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 70%;
+  padding-right: 2rem;
+  padding: 1rem;
 }
 
 .Information-Cloud {
@@ -151,10 +156,110 @@
   align-items: center;
   align-content: center;
   line-height: 0rem;
+  margin-bottom: 1.2rem;
+}
+
+.Div-Why-Us {
+  display: flex;
+  margin: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  width: 100%;
 }
 
 .H1-Volunteer-Form-About-Us-Page {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
 }
 
-.H6.Volunteer-Form-About-Us-Page {
+.H6-Volunteer-Form-About-Us-Page {
+  color: red;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.Div-VolunteerForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.Article-Why-Canastas-De-Vida-Section-About-Us-Page {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .Be-Volunteer-Section-About-Us-Page {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: auto;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .H3-First-Section-About-Us-Page {
+    font-size: 0.5rem;
+    font-family: "POPPINS";
+    line-height: 0vh;
+    margin-top: 0vh;
+  }
+
+  .H1-First-Section-About-Us-Page {
+    font-size: 1rem;
+    font-family: "POPPINS";
+  }
+
+  .Text-Third-Container-About-Us-Page {
+    margin: 3rem;
+    font-size: 0.65rem;
+  }
+
+  .Article-Why-Canastas-De-Vida-Section-About-Us-Page {
+    width: 100%;
+  }
+
+  .Why-Canastas-De-Vida-Section-About-Us-Page {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    display: flex;
+  }
+
+  .H1-Why-Canastas-De-Vida-Section-About-Us-Page {
+    font-size: 1.1rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .Div-Why-Us {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  
+  .H1-Fourth-Section-About-Us-Page {
+    font-size: 1rem;
+  }
+
+  .Article-Fourth-Section-About-Us-Page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 }
