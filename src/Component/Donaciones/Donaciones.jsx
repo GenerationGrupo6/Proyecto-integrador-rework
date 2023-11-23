@@ -1,55 +1,11 @@
-import { useState } from 'react';
-import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';
-import axios from "axios";
-
-import FDonacion from '../../assets/entrega-de-alimento.png'
 import './Donaciones.css'
-
-
+import { useState } from 'react';
+import FDonacion from '../../assets/entrega-de-alimento.png'
 const Donaciones = () => {
-    const [preferenceId, setPreferenceId] = useState(null);
     const [montoDonacion, setMontoDonacion] = useState('');
     const [destinoDonacion, setDestinoDonacion] = useState('cerrillos');
-
-  initMercadoPago('TEST-12840695-a4b5-40ba-ab4f-bb1a4fe1c5e7');
-
-  const createPreference = async () => {
-    try {
-        const response = await axios.post("http://localhost:8080/api/v1create_preference", {
-            description: "Nueva donación",
-            price: montoDonacion.monto,
-            quantity: 1,
-            // destiny: nuevaDonacion.destino,
-            // currency_id: "CLP"
-        });
-
-        const { id } = response.data;
-        return id;
-        }catch (error) {
-            console.log(error);
-        }
-    };
-
-    const handleBuy = async () => {
-        const id = await createPreference();
-        if (id) {
-            setPreferenceId(id);
-        }
-    };
-
-    const handleClick = async (e) => {
-        e.preventDefault();
-
-        try {
-        await guardarDonacion();
-        handleBuy();
-        } catch (error) {
-          console.error('Error handling click;', error);
-        }
-      };
-
-
-    const guardarDonacion = async () =>  {
+    const guardarDonacion = async (e) =>  {
+      e.preventDefault()
       try {
         await fetch('http://localhost:8080/api/v1/donacion', {
           method: 'POST',
@@ -62,7 +18,6 @@ const Donaciones = () => {
       } catch (error) {
         console.error('Error al enviar la donación:', error);
       }
-      
     };
     const destino = [
         'Cerrillos',
@@ -99,8 +54,6 @@ const Donaciones = () => {
         'San Ramón',
         'Vitacura'
       ];
-    
-  
     return (
       <div className="contenedorpadredetodo">
       <div className="contenedorposicion">
@@ -141,7 +94,7 @@ const Donaciones = () => {
             <button
               type="button"
               className="guardardonacion"
-              onClick={handleClick}>
+              onClick={guardarDonacion}>
               Realizar Donación
             </button>
           </div>
@@ -150,5 +103,4 @@ const Donaciones = () => {
       </div>
     );
   };
-
 export {Donaciones};
