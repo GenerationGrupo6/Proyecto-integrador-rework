@@ -146,7 +146,7 @@ nav ul li a:hover:not(.active) {
   } 
 }
 
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
   #LogoNavMobile {
     position: relative;
     right: 1rem;
@@ -189,4 +189,4 @@ nav ul li a:hover:not(.active) {
     padding-top: 1rem;
     width: 6rem;
   }
-}
+} */
