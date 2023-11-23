@@ -1,13 +1,9 @@
 import './Donaciones.css'
 import { useState } from 'react';
 import FDonacion from '../../assets/entrega-de-alimento.png'
-
-
-
 const Donaciones = () => {
     const [montoDonacion, setMontoDonacion] = useState('');
     const [destinoDonacion, setDestinoDonacion] = useState('cerrillos');
-    
     const guardarDonacion = async (e) =>  {
       e.preventDefault()
       try {
@@ -59,8 +55,6 @@ const Donaciones = () => {
         'San Ramón',
         'Vitacura'
       ];
-    
-  
     return (
       <div className="contenedorpadredetodo">
       <div className="contenedorposicion">
@@ -110,5 +104,4 @@ const Donaciones = () => {
       </div>
     );
   };
-
 export {Donaciones};

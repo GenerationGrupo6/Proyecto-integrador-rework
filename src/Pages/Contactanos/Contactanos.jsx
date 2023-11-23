@@ -1,9 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import './Contactanos.css'
-import contact from '../../assets/contact.jpg'
+
+emailjs.init('tDq_goSSt7SfrPeBt');
+
+
 
 export const Contactanos = () => {
-  return (
+    const [result, setResult] = useState('');
+  
+    const sendEmail = (event) => {
+      event.preventDefault();
+  
+      const to = document.getElementById("to").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
+  
+      emailjs.send("service_jb4gd4s", "template_3x6b2f7", {
+        to_email: to,
+        subject: subject,
+        message: message
+      }).then(
+        (response) => {
+          setResult("Tu Mensaje ha sido enviado!");
+        },
+        (error) => {
+          setResult("Ups, Tu mensaje no ha sido enviado");
+          console.log(error);
+        }
+      );
+    };
+    
+    return (
     <>
         <div className="container">
         <div className="gradient-section">
@@ -13,20 +41,20 @@ export const Contactanos = () => {
                 <p className="parrafo">"Juntos hacemos el cambio"</p>
             </div>
         </div>
-    
+   
         <div className="formulario">
             <h2>Contactanos</h2>
             <p>Queremos saber de tí, Escríbenos para cualquier duda o consulta.</p>
             <form>
                 <div className="form-contact">
-                    <label htmlFor="to">Para:</label>
+                    <label htmlFor="to">Email:</label>
                     <input type="text" name="to" id="to"
                     required autoComplete="off" placeholder="Ejemplo@email.com"/>
                 </div>
                 <div className="form-contact">
-                    <label htmlFor="subject">Asunto:</label>
+                    <label htmlFor="subject">Nombre:</label>
                     <input text="text" name="subject" id="subject"
-                    required autoComplete="off" placeholder="Motivo del mensaje"/>
+                    required autoComplete="off" placeholder="Nombre Apellido"/>
                 </div>
                 <div className="form-contact">
                     <label htmlFor="message">Mensaje:</label>
@@ -35,11 +63,13 @@ export const Contactanos = () => {
                 </div>
                 <div className="form-contact result-container">
                     <p className="result">Tu correo ha sido enviado.</p>
-                    <button type="button" className="send-btn">Enviar mensaje</button>
+                    <button type="button" className="send-btn" onClick={sendEmail}>Enviar mensaje</button>
                 </div>
             </form>
+            <div className="result">{result}</div>
         </div>
     </div>
     </>
   )
 }
+

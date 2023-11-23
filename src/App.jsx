@@ -11,6 +11,7 @@ import { UneteAlCambio } from "./Pages/UneteAlCambio/UneteAlCambio";
 import { Historias } from "./Pages/Historias/Historias";
 import { Register } from "./Pages/register/register";
 import { MapaInteractivo2 } from "./Pages/MapaInteractivo2/MapaInteractivo2";
+import { HowDoesIt2} from "./Pages/ComoFunciona/ComoFunciona";
 import { AuthProvider } from "./context/AuthContext";
 import { Perfil } from "./Pages/paginaPerfil/Perfil";
 import ProtectedRoute from "./Pages/protected/ProtectedRoute";
@@ -23,25 +24,26 @@ function App() {
 
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/contactanos" element={<Contactanos />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/unete-al-cambio" element={<UneteAlCambio />} />
-          <Route path="/Historias" element={<Historias />} />
-          <Route path="/MapaInteractivo2" element={<MapaInteractivo2 />} />
-          <Route element={<ProtectedRoute />}>
-            <Route path="/profile" element={<Perfil />} />
-          </Route>
-        </Routes>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/contactanos" element={<Contactanos />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/unete-al-cambio" element={<UneteAlCambio />} />
+        <Route path="/Historias" element={<Historias />} />
+        <Route path="/MapaInteractivo2" element={<MapaInteractivo2 />} />
+        <Route path="/HowDoesIt2" element={<HowDoesIt2 />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/profile" element={<Perfil />} />
+        </Route>
+      </Routes>
 
-        <main></main>
-      </BrowserRouter>
-    </AuthProvider>
+      <main></main>
+    </BrowserRouter>
+  </AuthProvider>
   );
 }
 
