@@ -48,7 +48,7 @@ export const NavBar = () => {
         {isAuthenticated ? (
           <li className="LinkTittle"> Welcome user</li>
         ) : (
-          <li className="LinkTittle"> logout</li>
+          <li className="LinkTittle"> Logout</li>
         )}
         <li className="LinkTittle">
           {" "}

@@ -40,6 +40,7 @@
   align-content: center;
   display: flex;
   width: 100%;
+  margin-bottom: 1.2rem;
 }
 
 .div-entrada {
