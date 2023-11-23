@@ -18,6 +18,7 @@ const Donaciones = () => {
       } catch (error) {
         console.error('Error al enviar la donación:', error);
       }
+      window.location.reload();
     };
     const destino = [
         'Cerrillos',
