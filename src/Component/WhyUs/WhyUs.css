@@ -1,24 +1,26 @@
 .Container-Arguments-Why-Canastas-De-Vida-About-Us-Page {
-  width: 90%;
+  width: 85%;
   height: 50vh;
   margin: 10px 10px 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: whitesmoke;
-  box-shadow: 0 3px 13px 1px rgb(0 0 0/ 9%);
+  background-color: #fab9007a;
+  border-radius: 6rem;
+  box-shadow: -1px 5px 17px 0px gray;
 }
 
 .Image-Arguments-Why-Canastas-De-Vida-About-Us-Page {
   height: 100%;
-  width: auto;
+  width: 40vw;
+  border-radius: 6rem 0 0 6rem;
 }
 
 .Text-Arguments-Why-Canastas-De-Vida-About-Us-Page {
   text-align: center;
-  padding: 10vh;
-  font-weight: 2vh;
+  padding: 2rem;
   line-height: 1.5rem;
+  width: 60%;
 }
 
 .Title-Arguments-Why-Canastas-De-Vida-About-Us-Page {
