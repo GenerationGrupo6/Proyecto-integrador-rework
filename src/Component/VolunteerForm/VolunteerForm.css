@@ -1,0 +1,51 @@
+.Form-Volunteer-About-Us-Page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.Form-Volunteer-About-Us-Page label {
+  font-weight: bold;
+  font-size: 0.7em;
+}
+
+.Form-Volunteer-About-Us-Page input,
+.Form-Volunteer-About-Us-Page select,
+.Form-Volunteer-About-Us-Page textarea {
+  width: 100%;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+.Form-Volunteer-About-Us-Page input[type="submit"] {
+  background-color: orange;
+  width: 9rem;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Form-Volunteer-About-Us-Page input[type="submit"]:hover {
+  background-color: orangered;
+}
+
+.div-submit {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.div-entrada {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+}

@@ -1,12 +1,21 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import "./VolunteerForm.css";
+import axios from "axios";
 
 function VolunteerForm() {
   const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    
+  const onSubmit = async (data) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/api/v1/volunteer-register",
+        data
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+    }
   };
 
   return (
@@ -14,56 +23,65 @@ function VolunteerForm() {
       className="Form-Volunteer-About-Us-Page"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div>
+      <div className="div-entrada">
         <label>Nombre Completo</label>
         <input
-          type="text"
-          name="nombre"
-          {...register("nombre", { required: true })}
+          type="String"
+          name="name"
+          {...register("name", { required: true })}
         />
       </div>
-      <div>
+      <div className="div-entrada">
         <label>Rut</label>
         <input
-          type="text"
-          name="rut"
-          {...register("rut", { required: true })}
+          type="Number"
+          name="rut" placeholder=" 191792392"
+          {...register("rut", { required: true }, { unique: true })}
         />
       </div>
-      <div>
+      <div className="div-entrada">
         <label>Edad</label>
         <input
-          type="number"
-          name="edad"
-          {...register("edad", { required: true })}
+          type="Number"
+          name="age"
+          {...register("age", { required: true })}
         />
       </div>
-      <div>
-        <label>Número de Teléfono</label>
-        <input type="tel" name="telefono" {...register("telefono")} />
+      <div className="div-entrada">
+        <label>Email</label>
+        <input type="String" name="email" {...register("email")} />
       </div>
-      <div>
+      <div className="div-entrada">
+        <label>Teléfono</label>
+        <input type="Number" name="phone" {...register("phone")} />
+      </div>
+      <div className="div-entrada">
         <label>Ocupación</label>
-        <input type="text" name="ocupacion" {...register("ocupacion")} />
+        <select
+          type="String"
+          name="ocupation"
+          {...register("ocupation", { required: true })}
+        >
+          <option value="">Seleccione su ocupación</option>
+          <option value="Estudiante">Estudiante</option>
+          <option value="Trabajador">Trabajador</option>
+          <option value="Jubilado">Jubilado</option>
+          <option value="Otro">Otro</option>
+        </select>
       </div>
-      <div>
-        <label>Subir CV</label>
-        <input
-          type="file"
-          name="cv"
-          accept=".pdf,.doc,.docx"
-          {...register("cv")}
-        />
-      </div>
-      <div>
+      <div className="div-entrada">
         <label>Comuna de Residencia</label>
-        <select name="comuna" {...register("comuna", { required: true })}>
+        <select
+          type="String"
+          name="residence"
+          {...register("residence", { required: true })}
+        >
           <option value="">Seleccione una comuna</option>
           <option value="Santiago">Santiago</option>
           <option value="Providencia">Providencia</option>
           <option value="LasCondes">Las Condes</option>
           <option value="LaReina">La Reina</option>
-          <option value="{Ñuñoa">Ñuñoa</option>
+          <option value="Ñuñoa">Ñuñoa</option>
           <option value="Macul">Macul</option>
           <option value="Peñalolen">Peñalolén</option>
           <option value="LaFlorida">La Florida</option>
@@ -95,14 +113,17 @@ function VolunteerForm() {
           <option value="Colina">Colina</option>
         </select>
       </div>
-      <div>
-        <label>Explique por qué quiere ser voluntario</label>
+      <div className="div-entrada">
+        <label>¿Por qué quieres ser voluntario?</label>
         <textarea
+          type="String"
           name="motivacion"
-          {...register("motivacion", { required: true })}
+          {...register("motivation", { required: true })}
         ></textarea>
       </div>
-      <input type="submit" value="Enviar" />
+      <div className="div-submit">
+        <input type="submit" value="Enviar" />
+      </div>
     </form>
   );
 }

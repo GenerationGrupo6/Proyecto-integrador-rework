@@ -8,7 +8,7 @@
   align-items: center;
   display: flex;
   z-index: 100;
-  width: 100vw;
+  width: 100%;
   padding-top: 0vh;
   height: 0vh;
   margin-top: 0vh;
@@ -82,7 +82,7 @@ nav ul li a:hover:not(.active) {
   border-radius: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .NavConfig {
     display: flex;
     align-items: flex-start;
@@ -100,11 +100,12 @@ nav ul li a:hover:not(.active) {
     align-items: center;
     border-radius: 0;
   }
+
   #open {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 65%;
+    width: 72%;
     background: transparent;
     flex-direction: column;
     padding-top: 2rem;
@@ -113,12 +114,14 @@ nav ul li a:hover:not(.active) {
   #LogoNav {
     display: none;
   }
+
   #LogoNavMobile {
     display: flex;
     padding-top: 1rem;
-    width: 12rem;
+    width: 8rem;
   }
 }
+
 @media (max-width: 375px) {
   #LogoNavMobile {
     position: relative;
@@ -129,36 +132,37 @@ nav ul li a:hover:not(.active) {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
   #open {
     display: flex;
     align-items: flex-end;
-    width: 40%;
+    width: 55%;
     background: transparent;
     flex-direction: column;
     justify-content: flex-end;
     flex-wrap: nowrap;
-    font-size: 0.6rem;
-    margin-top: 6.5rem;
+    margin-top: 0rem;
     line-height: 0.5;
   }
+
+  
 
   .NavConfig {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: row;
-    padding-top: 1.2rem;
+    width: 100%;
   }
   .Menu {
     display: flex;
-    padding-top: 1.2rem;
+    width: 2rem;
+    height: 1.3rem;
   }
 
   #LogoNavMobile {
     display: flex;
     padding-top: 1rem;
-    width: 10rem;
+    width: 6rem;
   }
-  
 }

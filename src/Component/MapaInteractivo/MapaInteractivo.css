@@ -16,9 +16,12 @@
     align-items: center;
     background-color: var(--color-secundario-B);
     padding: 1.5rem;
+    border-radius: 10px;
+    overflow: auto;
 }
 .ContCard .titulo {
     display: flex;
+    margin-bottom: 0.5rem;
     font-size: 1.5rem;
     font-weight: bold;
     padding: 0 1rem;
@@ -34,8 +37,27 @@
     font-size: 1.25rem;
     padding: 0 1rem;
     width: 27vw;
-    min-height: 30vh;
+    height: 65vh;
     background-color: var(--color-secundario);
+}
+.tituloContenido{
+    margin: 0;
+}
+.contenidoApi{
+    margin: 0.5rem;
+    display: flex;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-all;
+
+}
+.contenidoApiLista{
+    display: flex;
+    flex-direction: column;
+    list-style-type:none;
+}
+.lista{
+    margin: 0.5rem;
 }
 
 .mapa {
@@ -51,6 +73,7 @@ stroke: var(--color-primario-B);
 fill: var(--color-secundario-B);
 stroke: var(--color-primario);
 }
+
 @media (max-width: 768px) {
     .ContenedorGeneral{
         flex-direction: column;
