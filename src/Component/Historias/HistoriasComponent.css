@@ -43,3 +43,21 @@
   font-size: 1.3rem;
   text-align: justify;
 }
+@media (max-width: 1124px) {
+  .main-container-hc {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .main-container-hc {
+    width: 60%;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  .main-container-hc {
+    width: 70%;
+    height: 48vh;
+    margin-left: 0;
+  }
+}

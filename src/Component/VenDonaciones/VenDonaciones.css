@@ -49,6 +49,24 @@
     margin-top: 2rem;
     min-height: 3.5rem;
     min-width: 12rem;
-    
-
 }
+
+
+@media (max-width: 768px) {
+    .contenedorpapa,
+    .contenedorcomofun,
+    .contenedorvendona {
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+    }
+}
+@media (max-width: 480px) {
+    .contenedorpapa,
+    .contenedorcomofun,
+    .contenedorvendona {
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+    }
+  }
