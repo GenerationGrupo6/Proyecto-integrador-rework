@@ -1,0 +1,51 @@
+.div-email-subscription {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 20vh;
+    margin-left: 12rem;
+}
+
+.submit-email-subscription {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  height: auto;
+}
+
+.submit-email-subscription input,
+.submit-email-subscription select,
+.submit-email-subscription textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0px 2px 6px 0px #5e5e5e6e;
+}
+
+.div-submit-email-subscription {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    width: 40%;
+    margin-right: 10rem;
+}
+
+.input-submit-subscribe {
+    background-color: seagreen;
+    width: 8rem;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    height: 2.3rem;
+}
+
+.input-submit-subscribe:hover {
+  background-color: goldenrod;
+}

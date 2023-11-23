@@ -2,7 +2,7 @@ import "./MapaInteractivo.css";
 import { useState, useEffect } from "react";
 
 const MapaInteractivo = () => {
-  const [comuna, setComuna] = useState("HAGA CLICK EN UNA COMUNA!!");
+  const [comuna, setComuna] = useState("haga click en una comuna!");
   const [target, setTarget] = useState(null);
   const [iden, setIden] = useState("Region_Metropolitana");
   const [habitantes, setHabitantes] = useState ("");

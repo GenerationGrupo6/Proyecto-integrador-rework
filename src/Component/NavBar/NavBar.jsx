@@ -20,12 +20,22 @@ export const NavBar = () => {
     }
   });
 
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, logout } = useAuth();
 
   return (
     <nav className="NavConfig">
-      <img id="LogoNavMobile" src={logo} alt="LogoCanastasDeVida" />
+      <div
+        className="Menu"
+        onClick={() => {
+          setMenuOpen(!menuOpen);
+        }}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul className="navBar" id={menuOpen ? "open" : ""}>
+        <img id="LogoNavMobile" src={logo} alt="LogoCanastasDeVida" />
         <li className="LinkTittle">
           {" "}
           <NavLink to="/">INICIO</NavLink>
@@ -46,25 +56,31 @@ export const NavBar = () => {
           <NavLink to="/contactanos">CONTACTANOS</NavLink>
         </li>
         {isAuthenticated ? (
-          <li className="LinkTittle"> Welcome user</li>
+          <>
+            <li className="LinkTittle"> Welcome user</li>
+            <li
+              className="LinkTittle"
+              to="/"
+              onClick={() => {
+                logout();
+              }}
+            >
+              {" "}
+              Logout
+            </li>
+          </>
         ) : (
-          <li className="LinkTittle"> Logout</li>
+          <li className="LinkTittle">
+            {" "}
+            <NavLink to="/Login">Login</NavLink>
+          </li>
         )}
         <li className="LinkTittle">
           {" "}
           <NavLink to="/unete-al-cambio">UNETE AL CAMBIO</NavLink>
         </li>
       </ul>
-      <div
-        className="Menu"
-        onClick={() => {
-          setMenuOpen(!menuOpen);
-        }}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      
     </nav>
   );
 };

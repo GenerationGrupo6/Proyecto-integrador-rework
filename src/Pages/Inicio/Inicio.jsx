@@ -11,7 +11,7 @@ function Inicio() {
       <Home />
       <Mapa/>
       <SectionCards header="Nuestras Historias" />
-      <VenDonaciones/>
+      <VenDonaciones />
       <Subscription/>
     </>
   );

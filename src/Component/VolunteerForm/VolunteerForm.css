@@ -49,3 +49,9 @@
   align-items: flex-start;
   width: 80%;
 }
+
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
