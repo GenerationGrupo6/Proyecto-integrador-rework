@@ -1,6 +1,6 @@
 import "./Home.css";
 import { DonationButton } from "../DonationButton/DonationButton.jsx";
-import { InformationCloud } from "../InformationCloud/InformationCloud.jsx";
+
 import MoneyDonation from "../../assets/Money-Donation-removebg-preview.png";
 
 function Home() {
@@ -11,49 +11,63 @@ function Home() {
           <section className="Ilustration-Section-Home-Page">
             <header className="Header-Home-Page">
               <div className="Together-Home-Page">
-                <h3 className="We-Feed-The-Change">ALIMENTEMOS</h3>
-                <h3 className="We-Feed-The-Change Space">EL</h3>
-                <h3 className="We-Feed-The-Change ">CAMBIO</h3>
+                <div className="Donate-Home-Page">
+                  <h1 className="H1-Donate-Home-Page">Haz tu aporte aquí</h1>
+                </div>
+                <div className="Button-Home-Page">
+                  <DonationButton />
+                </div>
               </div>
-              <h2 className="We-Feed-The-Change">¡JUNTOS!</h2>
-              <DonationButton />
             </header>
-          </section>
-          <section className="Infortation-Cloud-Section-Home-Page">
-            <InformationCloud />
           </section>
         </main>
       </div>
       <div className="Second-Container-Donation-Steps-Home-Page">
-        <section className="Donation-Steps-Section1-Home-Page">
-          <article className="Donation-Steps-Article-Home-Page">
-            <header className="Donation-Steps-Header-Home-Page">
-              <p className="Donation-Steps-P-Home-Page">Con Canastas De Vida</p>
-              <h1 className="Donation-Steps-H1-Home-Page">
+        <div>
+          <section className="Donation-Steps-Section1-Home-Page">
+            <div className="Donation-Steps-Header-Home-Page">
+              <p className="Donation-Steps-P-Home-Page">
+                Con Canastas De Vida
+                <br className="Donation-Steps-H1-Home-Page" />
                 Donar Nunca Fue Tan Fácil
-              </h1>
-              <div className="Donation-Steps-Figure-Money-Donation-Home-Page">
-                <img src={MoneyDonation} className="Figure-Money-Donation" />
-              </div>
-            </header>
-          </article>
-        </section>
+              </p>
+            </div>
+            <div className="Donation-Steps-Figure-Money-Donation-Home-Page">
+              <img src={MoneyDonation} className="Figure-Money-Donation" />
+            </div>
+          </section>
+          <div className="Third-Container-Donation-Steps-Home-Page">
+            <ol>
+              <li>
+                <h2>Inicia Sesión</h2>
+                <p>Regístrate de forma segura en nuestra plataforma.</p>
+              </li>
+              <li>
+                <h2>Es Momento de Donar</h2>
+                <p>Establece el monto que quieres donar</p>
+              </li>
+              <li>
+                <h2>Mide el Impacto</h2>
+                <p>Visualiza cómo será ocupada tu donación</p>
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
-      <div className="Third-Container-Donation-Steps-Home-Page">
-        <ol>
-          <li>
-            <h2>Inicia Sesión</h2>
-            <p>Regístrate de forma segura en nuestra plataforma.</p>
-          </li>
-          <li>
-            <h2>Es Momento de Donar</h2>
-            <p>Establece el monto que quieres donar</p>
-          </li>
-          <li>
-            <h2>Mide el Impacto</h2>
-            <p>Visualiza cómo será ocupada tu donación</p>
-          </li>
-        </ol>
+      <div className="Div-Voluntariado">
+        <section className="Infortation-Cloud-Section-Home-Page">
+          <div className="Div-Infortation-Cloud-Section-Home-Page">
+            <h1 className="H1-Infortation-Cloud-Section-Home-Page">
+              ¿Deseas contribuir de otra manera?
+            </h1>
+            <h1 className="H1-2-Infortation-Cloud-Section-Home-Page">
+              Sé Voluntario
+            </h1>
+          </div>
+          <div className="Div2-Infortation-Cloud-Section-Home-Page">
+            <DonationButton/>
+          </div>
+        </section>
       </div>
     </>
   );

@@ -8,7 +8,7 @@
   --color-secundario-opa: rgba(238, 188, 99, 0.3);
 }
 #root {
-  max-width: 100vw;
+  max-width: 100%;
   font-family: "Poppins", sans-serif;
 }
 
