@@ -4,8 +4,10 @@ import { useState, useEffect } from "react";
 const MapaInteractivo = () => {
   const [comuna, setComuna] = useState("HAGA CLICK EN UNA COMUNA!!");
   const [target, setTarget] = useState(null);
-  const [contenido, setContenido] = useState({});
   const [iden, setIden] = useState("Region_Metropolitana");
+  const [habitantes, setHabitantes] = useState ("");
+  const [municipalidad, setMunicipalidad] = useState("seleccione una comuna");
+  const [donaciones, setdonaciones] = useState([1, 2, 3, 4]);
   const clickTarget = (id) => {
     setTarget(id);
   };
@@ -22,15 +24,18 @@ const MapaInteractivo = () => {
     }
   }, [target]);
   useEffect(() => {
-    fetch(`http://localhost:3001/${iden}`)
+    fetch(`http://localhost:8080/api/v1/${iden}`)
       .then((res) => res.json())
-      .then((data) => setContenido(data));
-  });
+      .then((data) => {
+        
+        setHabitantes(data[0].habitantes);
+        setMunicipalidad(data[0].municipalidad);
+        setdonaciones(data[0].donaciones);
+      });
+  }, [iden]);
 
   const comunaActual = comuna;
-  const habitantes = contenido.habitantes;
-  const municipalidad = contenido.municipalidad;
-  const donaciones = contenido.donaciones || ["seleccione una comuna"];
+
   return (
     <div className="ContenedorGeneral">
       <svg
@@ -395,16 +400,19 @@ const MapaInteractivo = () => {
         </div>
         <div className="contenido">
           <h3 className="tituloContenido">{`Habitantes: `}</h3>
-          <h4 className="contenidoApi">{habitantes} Personas</h4>
+          { <h4 className="contenidoApi">{habitantes} Personas</h4> }
           <h3 className="tituloContenido">{`Web Municipalidad: `}</h3>
           <h4 className="contenidoApi">
             <a href={municipalidad}>{municipalidad}</a>
           </h4>
           <h3 className="tituloContenido">{`Instituciones: `}</h3>
           <ul className="contenidoApiLista">
-            {donaciones.map((donacion, index) => (
-              <li className="lista" key={index}>{donacion}</li>
-            ))}
+            {donaciones &&
+              donaciones.map((donacion, index) => (
+                <li className="lista" key={index}>
+                  {donacion}
+                </li>
+              ))}
           </ul>
         </div>
       </div>
