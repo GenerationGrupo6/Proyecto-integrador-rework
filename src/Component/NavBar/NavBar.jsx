@@ -20,7 +20,7 @@ export const NavBar = () => {
     }
   });
 
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, logout } = useAuth();
 
   return (
     <nav className="NavConfig">
@@ -56,9 +56,24 @@ export const NavBar = () => {
           <NavLink to="/contactanos">CONTACTANOS</NavLink>
         </li>
         {isAuthenticated ? (
-          <li className="LinkTittle"> Welcome user</li>
+          <>
+            <li className="LinkTittle"> Welcome user</li>
+            <li
+              className="LinkTittle"
+              to="/"
+              onClick={() => {
+                logout();
+              }}
+            >
+              {" "}
+              Logout
+            </li>
+          </>
         ) : (
-          <li className="LinkTittle"> Logout</li>
+          <li className="LinkTittle">
+            {" "}
+            <NavLink to="/Login">Login</NavLink>
+          </li>
         )}
         <li className="LinkTittle">
           {" "}
