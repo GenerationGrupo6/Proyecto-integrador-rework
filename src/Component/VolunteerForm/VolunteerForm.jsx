@@ -35,7 +35,8 @@ function VolunteerForm() {
         <label>Rut</label>
         <input
           type="Number"
-          name="rut" placeholder=" 191792392"
+          name="rut"
+          placeholder=" 191792392"
           {...register("rut", { required: true }, { unique: true })}
         />
       </div>
