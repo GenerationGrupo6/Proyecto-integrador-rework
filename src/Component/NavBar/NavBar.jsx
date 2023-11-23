@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../../assets/Logo-sin-fondo.png";
 import "./NavBar.css";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,6 +19,8 @@ export const NavBar = () => {
       scrollCheck.classList.remove("onScroll");
     }
   });
+
+  const { isAuthenticated } = useAuth();
 
   return (
     <nav className="NavConfig">
@@ -42,10 +45,11 @@ export const NavBar = () => {
           {" "}
           <NavLink to="/contactanos">CONTACTANOS</NavLink>
         </li>
-        <li className="LinkTittle">
-          {" "}
-          <NavLink to="/Login">LOGIN</NavLink>
-        </li>
+        {isAuthenticated ? (
+          <li className="LinkTittle"> Welcome user</li>
+        ) : (
+          <li className="LinkTittle"> logout</li>
+        )}
         <li className="LinkTittle">
           {" "}
           <NavLink to="/unete-al-cambio">UNETE AL CAMBIO</NavLink>
