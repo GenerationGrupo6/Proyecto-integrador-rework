@@ -24,8 +24,18 @@ export const NavBar = () => {
 
   return (
     <nav className="NavConfig">
-      <img id="LogoNavMobile" src={logo} alt="LogoCanastasDeVida" />
+      <div
+        className="Menu"
+        onClick={() => {
+          setMenuOpen(!menuOpen);
+        }}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul className="navBar" id={menuOpen ? "open" : ""}>
+        <img id="LogoNavMobile" src={logo} alt="LogoCanastasDeVida" />
         <li className="LinkTittle">
           {" "}
           <NavLink to="/">INICIO</NavLink>
@@ -55,16 +65,7 @@ export const NavBar = () => {
           <NavLink to="/unete-al-cambio">UNETE AL CAMBIO</NavLink>
         </li>
       </ul>
-      <div
-        className="Menu"
-        onClick={() => {
-          setMenuOpen(!menuOpen);
-        }}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      
     </nav>
   );
 };

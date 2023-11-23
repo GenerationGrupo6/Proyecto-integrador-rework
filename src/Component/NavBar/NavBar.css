@@ -30,7 +30,6 @@
   align-items: center;
   justify-content: space-around;
   list-style: none;
-  padding-inline-end: 1vw;
   font-weight: bold;
   margin-top: 18vh;
   width: 65vw;
@@ -83,43 +82,68 @@ nav ul li a:hover:not(.active) {
 }
 
 @media (max-width: 770px) {
+  
   .NavConfig {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: row;
-  }
+  } 
 
   .Menu {
     display: flex;
+    z-index: 100;
+    background-color: whitesmoke;
+    padding: 0.7rem;
+    border-radius: 10px;
+  }
+  .menuhamburgerMobile{
+    display: flex;
+    flex-direction: column;
   }
   .navBar {
-    display: none;
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    align-items: center;
+    position: relative;
+    top: 15vh;
+    padding-inline-end: 1vw;
+    font-weight: bold;
+    margin-top: 10vh;
+    padding-top: 10rem;
+    width: 100vw;
     border-radius: 0;
+    height: auto;
+    font-size: 0.7rem;
+  }
+  .onScroll{
+    background-color: whitesmoke;
+    transition: none;
+    top: 0;
+    border-radius: 0;
+    height: 12.5vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    font-weight: bold;
+    width: 100vw;
+    border-radius: 0;
+    height: 0;
+    font-size: 0.7rem;
+    padding-left: 0;
   }
 
   #open {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 72%;
-    background: transparent;
-    flex-direction: column;
-    padding-top: 2rem;
+    display: none;
   }
 
   #LogoNav {
     display: none;
   }
 
-  #LogoNavMobile {
+#LogoNavMobile {
     display: flex;
+    justify-content: center;
     padding-top: 1rem;
     width: 8rem;
-  }
+  } 
 }
 
 @media (max-width: 375px) {
