@@ -1,7 +1,9 @@
 import "./Home.css";
 import { DonationButton } from "../DonationButton/DonationButton.jsx";
-
-import MoneyDonation from "../../assets/Money-Donation-removebg-preview.png";
+import charity from "../../assets/charity.jpg";
+import donatepls from "../../assets/donatepls.png";
+import CerdoDonacion from "../../assets/CerdoDonacion.png";
+import { VolunteerButton } from "../VolunteerButton copy/VolunteerButton.jsx";
 
 function Home() {
   return (
@@ -23,17 +25,17 @@ function Home() {
         </main>
       </div>
       <div className="Second-Container-Donation-Steps-Home-Page">
-        <div>
+        <div className="div-donation-steps-father">
           <section className="Donation-Steps-Section1-Home-Page">
             <div className="Donation-Steps-Header-Home-Page">
-              <p className="Donation-Steps-P-Home-Page">
+              <h1 className="Donation-Steps-P-Home-Page">
                 Con Canastas De Vida
                 <br className="Donation-Steps-H1-Home-Page" />
-                Donar Nunca Fue Tan Fácil
-              </p>
+                Juntos Hacemos el Cambio
+              </h1>
             </div>
             <div className="Donation-Steps-Figure-Money-Donation-Home-Page">
-              <img src={MoneyDonation} className="Figure-Money-Donation" />
+              <img src={donatepls} className="Figure-Money-Donation" />
             </div>
           </section>
           <div className="Third-Container-Donation-Steps-Home-Page">
@@ -65,7 +67,7 @@ function Home() {
             </h1>
           </div>
           <div className="Div2-Infortation-Cloud-Section-Home-Page">
-            <DonationButton/>
+            <VolunteerButton />
           </div>
         </section>
       </div>
