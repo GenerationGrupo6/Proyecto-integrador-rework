@@ -1,20 +1,36 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 import "./VolunteerForm.css";
 import axios from "axios";
+import React, { useState } from "react";
+import { validateRut } from "rutlib";
+
 
 function VolunteerForm() {
   const { register, handleSubmit } = useForm();
+  const [errors, setErrors] = useState({});
 
   const onSubmit = async (data) => {
     try {
+      if (!validateRut(data.rut)) {
+        setErrors({ rut: { message: " Rut no válido" } });
+        return;
+      }
+
       const response = await axios.post(
         "http://localhost:8080/api/v1/volunteer-register",
         data
       );
       console.log(response.data);
     } catch (error) {
-      console.error("Error al enviar el formulario:", error);
+
+      if (error.response && error.response.status === 400) {
+        setErrors(error.response.data.errors);
+      } else if (error.code === 11000) {
+        console.error("Error: Rut duplicado. El voluntario ya existe.");
+      } else {
+        console.error("Error al enviar el formulario:", error);
+      }
+
     }
   };
 
@@ -28,24 +44,39 @@ function VolunteerForm() {
         <input
           type="String"
           name="name"
-          {...register("name", { required: true })}
+          {...register("name", { required: true }, { unique: false })}
+
         />
       </div>
       <div className="div-entrada">
         <label>Rut</label>
         <input
-          type="Number"
+          type="String"
           name="rut"
-          placeholder=" 191792392"
+          placeholder=" 19179239-2"
+
           {...register("rut", { required: true }, { unique: true })}
         />
+        {errors.rut && (
+          <p className="error-message">Error:{errors.rut.message}</p>
+        )}
       </div>
       <div className="div-entrada">
         <label>Edad</label>
         <input
           type="Number"
           name="age"
-          {...register("age", { required: true })}
+          {...register("age", { required: true }, { unique: false })}
+        />
+      </div>
+      <div className="div-entrada">
+        <label>Email</label>
+        <input
+          placeholder="maria@gmail.com"
+          type="String"
+          name="email"
+          {...register("email", { unique: false }, { required: true })}
+
         />
       </div>
       <div className="div-entrada">
@@ -54,14 +85,20 @@ function VolunteerForm() {
       </div>
       <div className="div-entrada">
         <label>Teléfono</label>
-        <input type="Number" name="phone" {...register("phone")} />
+        <input
+          type="Number"
+          name="phone"
+          {...register("phone", { unique: false }, { required: true })}
+        />
+
       </div>
       <div className="div-entrada">
         <label>Ocupación</label>
         <select
           type="String"
           name="ocupation"
-          {...register("ocupation", { required: true })}
+          {...register("ocupation", { required: true }, { unique: false })}
+
         >
           <option value="">Seleccione su ocupación</option>
           <option value="Estudiante">Estudiante</option>
@@ -75,7 +112,8 @@ function VolunteerForm() {
         <select
           type="String"
           name="residence"
-          {...register("residence", { required: true })}
+          {...register("residence", { required: true }, { unique: false })}
+
         >
           <option value="">Seleccione una comuna</option>
           <option value="Santiago">Santiago</option>
@@ -119,7 +157,8 @@ function VolunteerForm() {
         <textarea
           type="String"
           name="motivacion"
-          {...register("motivation", { required: true })}
+          {...register("motivation", { required: true }, { unique: false })}
+
         ></textarea>
       </div>
       <div className="div-submit">
