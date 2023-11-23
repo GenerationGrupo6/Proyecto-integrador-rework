@@ -11,7 +11,6 @@ let comunas = [
         "comuna": "Region_Metropolitana",
         "habitantes": '7.112.808',
         "municipalidad": "",
-        "municipalidadcorto":"",
         "donaciones": ["selecciona una comuna",
         "selecciona una comuna"
     ]

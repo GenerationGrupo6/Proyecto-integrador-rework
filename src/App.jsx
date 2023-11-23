@@ -1,4 +1,5 @@
 import "./App.css";
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NavBar } from "./Component/NavBar/NavBar";
@@ -13,6 +14,7 @@ import { MapaInteractivo2 } from "./Pages/MapaInteractivo2/MapaInteractivo2";
 
 function App() {
   const location = window.location.pathname;
+  // eslint-disable-next-line no-unused-vars
   const HideNavBar =
     location === "/Login" || location === "/Registro" ? null : <NavBar />;
 
