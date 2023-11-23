@@ -2,7 +2,7 @@
   display: flex;
 }
 .Ilustration-Section-Home-Page {
-  background-image: url("../../assets/imagenFinal.png");
+  background-image: url("../../assets/imagenFinal.webp");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -83,14 +83,13 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  height: 100%;
+  height: 40vh;
   width: auto;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  padding: 3rem;
-  border-radius: 0 0 2rem 2rem;
-  background-color: #3dacc4;
+  padding: 5rem 3rem 0rem 3rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: white;
 }
 
 .Donation-Steps-Article-Home-Page {
@@ -152,6 +151,7 @@
   justify-content: center;
   height: 50vh;
   align-items: center;
+  background-color: white;
 }
 
 .Third-Container-Donation-Steps-Home-Page ol {
@@ -182,6 +182,11 @@ li::marker {
   align-content: center;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 0 0 20px 0px whitesmoke;
+}
+
+.div-donation-steps-father {
+  background-color: #78cfff;
 }
 
 @media (max-width: 1480px) {
@@ -201,7 +206,7 @@ li::marker {
   }
 
   .Ilustration-Section-Home-Page {
-    background-image: url("../../assets/imagenFinal.png");
+    background-image: url("../../assets/imagenFinal.webp");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -307,6 +312,4 @@ li::marker {
     justify-content: center;
     align-items: center;
   }
-
-  
 }
