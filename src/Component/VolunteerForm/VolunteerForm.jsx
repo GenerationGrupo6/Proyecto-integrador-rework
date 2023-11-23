@@ -34,8 +34,8 @@ function VolunteerForm() {
       <div className="div-entrada">
         <label>Rut</label>
         <input
-          type="Number"
-          name="rut" placeholder=" 191792392"
+          type="text"
+          name="rut" placeholder=" 19179239-2"
           {...register("rut", { required: true }, { unique: true })}
         />
       </div>
@@ -49,7 +49,7 @@ function VolunteerForm() {
       </div>
       <div className="div-entrada">
         <label>Email</label>
-        <input type="String" name="email" {...register("email")} />
+        <input placeholder="maria@gmail.com" type="String" name="email" {...register("email")} />
       </div>
       <div className="div-entrada">
         <label>Teléfono</label>
