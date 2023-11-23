@@ -9,31 +9,39 @@ import { Contactanos } from "./Pages/Contactanos/Contactanos";
 import { Login } from "./Pages/Login/Login";
 import { UneteAlCambio } from "./Pages/UneteAlCambio/UneteAlCambio";
 import { Historias } from "./Pages/Historias/Historias";
-import { Registro } from "./Pages/Registro/Registro";
+import { Register } from "./Pages/register/register";
 import { MapaInteractivo2 } from "./Pages/MapaInteractivo2/MapaInteractivo2";
+import { AuthProvider } from "./context/AuthContext";
+import { Perfil } from "./Pages/paginaPerfil/Perfil";
+import ProtectedRoute from "./Pages/protected/ProtectedRoute";
 
 function App() {
   const location = window.location.pathname;
   // eslint-disable-next-line no-unused-vars
   const HideNavBar =
-    location === "/Login" || location === "/Registro" ? null : <NavBar />;
+    location === "/Login" || location === "/register" ? null : <NavBar />;
 
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/nosotros" element={<Nosotros />} />
-        <Route path="/contactanos" element={<Contactanos />} />
-        <Route path="/Registro" element={<Registro />} />
+    <AuthProvider>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/contactanos" element={<Contactanos />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/unete-al-cambio" element={<UneteAlCambio />} />
+          <Route path="/Historias" element={<Historias />} />
+          <Route path="/MapaInteractivo2" element={<MapaInteractivo2 />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/profile" element={<Perfil />} />
+          </Route>
+        </Routes>
 
-        <Route path="/Login" element={<Login />} />
-        <Route path="/unete-al-cambio" element={<UneteAlCambio />} />
-        <Route path="/Historias" element={<Historias />} />
-        <Route path="/MapaInteractivo2" element={<MapaInteractivo2 />} />
-      </Routes>
-      <main></main>
-    </BrowserRouter>
+        <main></main>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

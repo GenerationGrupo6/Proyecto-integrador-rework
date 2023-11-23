@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import logo from "../../assets/Logo-sin-fondo.png";
 import "./NavBar.css";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   if (location.pathname === "/Login") return null;
-  if (location.pathname === "/Registro") return null;
+  if (location.pathname === "/register") return null;
 
   window.addEventListener("scroll", () => {
-
     const scrollCheck = document.querySelector(".NavConfig");
     if (!scrollCheck) return;
     if (window.scrollY > 0) {
@@ -19,6 +19,8 @@ export const NavBar = () => {
       scrollCheck.classList.remove("onScroll");
     }
   });
+
+  const { isAuthenticated } = useAuth();
 
   return (
     <nav className="NavConfig">
@@ -44,7 +46,7 @@ export const NavBar = () => {
         </li>
         <li className="LinkTittle">
           {" "}
-          <NavLink to="/historias">NUESTRAS HISTORIAS</NavLink>
+          <NavLink to="/Historias">NUESTRAS HISTORIAS</NavLink>
         </li>
         <Link to="/">
           <img id="LogoNav" src={logo} alt="LogoCanastasDeVida" />
@@ -53,10 +55,11 @@ export const NavBar = () => {
           {" "}
           <NavLink to="/contactanos">CONTACTANOS</NavLink>
         </li>
-        <li className="LinkTittle">
-          {" "}
-          <NavLink to="/Login">LOGIN</NavLink>
-        </li>
+        {isAuthenticated ? (
+          <li className="LinkTittle"> Welcome user</li>
+        ) : (
+          <li className="LinkTittle"> Logout</li>
+        )}
         <li className="LinkTittle">
           {" "}
           <NavLink to="/unete-al-cambio">UNETE AL CAMBIO</NavLink>
