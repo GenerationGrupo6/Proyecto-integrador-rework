@@ -1,45 +1,41 @@
-.contenedorposicion {
-  align-items: center;
+.contenedorpadredetodo{
   display: flex;
+  padding-top:5rem;
   width: 100%;
-  justify-content: flex-end;
-  background-color: var(--color-secundario-B);
-  height: 90vh;
-  flex-direction: row;
-  margin-top: 7rem;
-}
-.contenedordonaciones {
-  display: flex;
-  width: 85%;
-  height: 100%;
-  background-color: var(--color-primario);
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
 }
 
-.div-fotoDonacion {
+.contenedorposicion{
+  align-items: start;
   display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  background-color: var(--color-secundario-B);
+  
 }
-.cajadedonaciones {
+
+.contenedordonaciones {
+  display: flex;
+  padding: 5rem;
+  width: 50vw;
+  height: 100%;
+  background-color:var(--color-primario);
+  border-start-start-radius:  10px ;
+  border-bottom-left-radius: 10px;
+}
+.cajadedonaciones{
   display: flex;
   flex-direction: column;
   justify-content: start;
-  width: 30vw;
+  width:30vw;
+  
 }
 
 .montodonacion,
 .destinodonacion {
   font-size: 20px;
   text-align: justify;
+  
 }
 
 .donacioninput,
@@ -47,39 +43,14 @@
   font-size: 20px;
   text-align: justify;
   border-radius: 10px;
-  background-color: var(--color-secundario);
-  font-family: "Poppins", sans-serif;
+  background-color:var(--color-secundario);
+  font-family: 'Poppins', sans-serif;
 }
-.guardardonacion {
+.guardardonacion{
   background-color: var(--color-secundario-B);
   height: 3rem;
   width: 10rem;
   border-radius: 10px;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size:15px;
 }
-@media (max-width: 1124px) {
-    .contenedordonaciones,
-    .cajadedonaciones{
-        flex-direction: column;
-        height: 100vh;
-        width: 40%;
-    }
-}
-
-@media (max-width: 768px) {
-  .contenedordonaciones,
-  .cajadedonaciones {
-    flex-direction: column;
-    height: 100vh;
-  }
-}
-@media (max-width: 480px) {
-    .contenedordonaciones,
-    .cajadedonaciones{
-        flex-direction: column;
-      width: 70%;
-      height: 48vh;
-      margin-left: 0;
-    }
-  }

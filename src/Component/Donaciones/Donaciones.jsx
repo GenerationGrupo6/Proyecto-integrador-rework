@@ -11,7 +11,7 @@ const Donaciones = () => {
     const guardarDonacion = async (e) =>  {
       e.preventDefault()
       try {
-        await fetch('http://localhost:3000/api/v1/donacion', {
+        await fetch('http://localhost:8080/api/v1/donacion', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -62,12 +62,11 @@ const Donaciones = () => {
     
   
     return (
+      <div className="contenedorpadredetodo">
       <div className="contenedorposicion">
-        <div className='div-fotoDonacion'>
           <img id="fotoDonacion" src={FDonacion} />
-        </div>
         <div className="contenedordonaciones">
-          <form className="cajadedonaciones">
+          <div className="cajadedonaciones">
             <label className="montodonacion" htmlFor="montoDonacion">
               Monto de la Donación:
             </label>
@@ -79,6 +78,7 @@ const Donaciones = () => {
               onChange={(e) => setMontoDonacion(e.target.value)}
               min="3000"
               step="1000"
+              placeholder='Ingresa un monto minimo de 3000'
               required
             />
             <br />
@@ -101,12 +101,12 @@ const Donaciones = () => {
             <button
               type="button"
               className="guardardonacion"
-              onClick={guardarDonacion}
-            >
+              onClick={guardarDonacion}>
               Realizar Donación
             </button>
-          </form>
+          </div>
         </div>
+      </div>
       </div>
     );
   };

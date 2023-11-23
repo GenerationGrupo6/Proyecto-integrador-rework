@@ -108,7 +108,7 @@ nav ul li a:hover:not(.active) {
     width: 72%;
     background: transparent;
     flex-direction: column;
-    padding-top: 7.5rem;
+    padding-top: 2rem;
   }
 
   #LogoNav {
@@ -145,13 +145,7 @@ nav ul li a:hover:not(.active) {
     line-height: 0.5;
   }
 
-  nav ul li a {
-    display: block;
-    text-decoration: none;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    font-size: 0.4rem;
-  }
+  
 
   .NavConfig {
     display: flex;
