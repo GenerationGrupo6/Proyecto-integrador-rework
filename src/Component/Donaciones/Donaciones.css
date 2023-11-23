@@ -54,3 +54,21 @@
   font-family: 'Poppins', sans-serif;
   font-size:15px;
 }
+@media (max-width: 1124px) {
+  .contenedorpadredetodo {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .contenedorpadredetodo  {
+    width: 100%;
+    
+  }
+}
+@media (max-width: 480px) {
+  .contenedorpadredetodo  {
+    width: 100vw;
+    height: 100vh;
+    margin-left: 0;
+  }
+}

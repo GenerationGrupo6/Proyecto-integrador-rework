@@ -1,7 +1,7 @@
 import React from "react";
 import { SignUp } from "../../Component/Loginc/SignUp";
 
-const Registro = () => {
+const Register = () => {
   return (
     <>
       <SignUp />
@@ -9,4 +9,4 @@ const Registro = () => {
   );
 };
 
-export { Registro };
+export { Register };

@@ -4,6 +4,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { validateRut } from "rutlib";
 
+
 function VolunteerForm() {
   const { register, handleSubmit } = useForm();
   const [errors, setErrors] = useState({});
@@ -21,6 +22,7 @@ function VolunteerForm() {
       );
       console.log(response.data);
     } catch (error) {
+
       if (error.response && error.response.status === 400) {
         setErrors(error.response.data.errors);
       } else if (error.code === 11000) {
@@ -28,6 +30,7 @@ function VolunteerForm() {
       } else {
         console.error("Error al enviar el formulario:", error);
       }
+
     }
   };
 
@@ -42,6 +45,7 @@ function VolunteerForm() {
           type="String"
           name="name"
           {...register("name", { required: true }, { unique: false })}
+
         />
       </div>
       <div className="div-entrada">
@@ -50,6 +54,7 @@ function VolunteerForm() {
           type="String"
           name="rut"
           placeholder=" 19179239-2"
+
           {...register("rut", { required: true }, { unique: true })}
         />
         {errors.rut && (
@@ -71,7 +76,12 @@ function VolunteerForm() {
           type="String"
           name="email"
           {...register("email", { unique: false }, { required: true })}
+
         />
+      </div>
+      <div className="div-entrada">
+        <label>Email</label>
+        <input type="String" name="email" {...register("email")} />
       </div>
       <div className="div-entrada">
         <label>Teléfono</label>
@@ -80,6 +90,7 @@ function VolunteerForm() {
           name="phone"
           {...register("phone", { unique: false }, { required: true })}
         />
+
       </div>
       <div className="div-entrada">
         <label>Ocupación</label>
@@ -87,6 +98,7 @@ function VolunteerForm() {
           type="String"
           name="ocupation"
           {...register("ocupation", { required: true }, { unique: false })}
+
         >
           <option value="">Seleccione su ocupación</option>
           <option value="Estudiante">Estudiante</option>
@@ -101,6 +113,7 @@ function VolunteerForm() {
           type="String"
           name="residence"
           {...register("residence", { required: true }, { unique: false })}
+
         >
           <option value="">Seleccione una comuna</option>
           <option value="Santiago">Santiago</option>
@@ -145,6 +158,7 @@ function VolunteerForm() {
           type="String"
           name="motivacion"
           {...register("motivation", { required: true }, { unique: false })}
+
         ></textarea>
       </div>
       <div className="div-submit">
