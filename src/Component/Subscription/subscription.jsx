@@ -13,6 +13,7 @@ function Subscription() {
         data
       );
       console.log(response.data);
+      alert("Suscripción enviada con éxito");
     } catch (error) {
       console.error("Error al subscribirse:", error);
     }
@@ -35,7 +36,11 @@ function Subscription() {
         />
       </div>
       <div className="div-submit-email-subscription">
-        <input className="input-submit-subscribe" type="submit" value="Suscríbete" />
+        <input
+          className="input-submit-subscribe"
+          type="submit"
+          value="Suscríbete"
+        />
       </div>
     </form>
   );
