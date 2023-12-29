@@ -1,8 +1,5 @@
-# React + Vite
+# Canastas de Vida
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Es una nueva plataforma digital, destinada a promover la acción ciudadana. Su misión principal es habilitar un sistema de donaciones que se transforma en canastas de alimentos entregadas estratégicamente en diversos centros y ollas comunes. En este innovador espacio, los usuarios contarán con un mapa interactivo de Santiago, permitiéndoles explorar visualmente las comunas y descubrir los albergues y ollas comunes destinatarios de sus valiosas contribuciones voluntarias. Este mapa se convierte en una herramienta poderosa para localizar centros de asistencia cercanos y sumarse a iniciativas de voluntariado enriquecedoras.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+BE: https://github.com/Luniferr/Backend-Proyecto-Integrador
